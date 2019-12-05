@@ -51,14 +51,14 @@
             // 
             // txtmakhoi
             // 
-            this.txtmakhoi.Location = new System.Drawing.Point(88, 15);
+            this.txtmakhoi.Location = new System.Drawing.Point(78, 15);
             this.txtmakhoi.Name = "txtmakhoi";
             this.txtmakhoi.Size = new System.Drawing.Size(100, 20);
             this.txtmakhoi.TabIndex = 1;
             // 
             // txttenkhoi
             // 
-            this.txttenkhoi.Location = new System.Drawing.Point(88, 57);
+            this.txttenkhoi.Location = new System.Drawing.Point(78, 57);
             this.txttenkhoi.Name = "txttenkhoi";
             this.txttenkhoi.Size = new System.Drawing.Size(100, 20);
             this.txttenkhoi.TabIndex = 2;
@@ -88,9 +88,9 @@
             this.btsua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btsua.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btsua.Image = global::qlhocvien.Properties.Resources.refresh;
-            this.btsua.Location = new System.Drawing.Point(204, 15);
+            this.btsua.Location = new System.Drawing.Point(194, 17);
             this.btsua.Name = "btsua";
-            this.btsua.Size = new System.Drawing.Size(79, 58);
+            this.btsua.Size = new System.Drawing.Size(89, 58);
             this.btsua.TabIndex = 24;
             this.btsua.Text = "Load Data";
             this.btsua.Click += new System.EventHandler(this.Btsua_Click);

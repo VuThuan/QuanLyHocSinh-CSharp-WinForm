@@ -69,6 +69,7 @@
     <Compile Include="DAL\GV.cs" />
     <Compile Include="DAL\HocSinh.cs" />
     <Compile Include="DAL\HocSinhDAL.cs" />
+    <Compile Include="DAL\MH.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="GUI\GiaoVien.cs">
       <SubType>Form</SubType>

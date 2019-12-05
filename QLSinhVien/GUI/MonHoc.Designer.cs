@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtmahvmh = new System.Windows.Forms.TextBox();
-            this.btnXemLai = new DevComponents.DotNetBar.ButtonX();
+            this.btnDanhSachMH = new DevComponents.DotNetBar.ButtonX();
             this.btnThemMH = new DevComponents.DotNetBar.ButtonX();
             this.btnXoaMH = new DevComponents.DotNetBar.ButtonX();
             this.btnSuaMH = new DevComponents.DotNetBar.ButtonX();
@@ -55,7 +55,7 @@
             this.showdatamonhoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showdatamonhoc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.showdatamonhoc.GridColor = System.Drawing.Color.LightCyan;
-            this.showdatamonhoc.Location = new System.Drawing.Point(0, 175);
+            this.showdatamonhoc.Location = new System.Drawing.Point(0, 163);
             this.showdatamonhoc.Name = "showdatamonhoc";
             this.showdatamonhoc.Size = new System.Drawing.Size(457, 145);
             this.showdatamonhoc.TabIndex = 0;
@@ -63,35 +63,35 @@
             // 
             // txtmamhmh
             // 
-            this.txtmamhmh.Location = new System.Drawing.Point(108, 49);
+            this.txtmamhmh.Location = new System.Drawing.Point(108, 23);
             this.txtmamhmh.Name = "txtmamhmh";
             this.txtmamhmh.Size = new System.Drawing.Size(114, 20);
             this.txtmamhmh.TabIndex = 1;
             // 
             // txttenmhmh
             // 
-            this.txttenmhmh.Location = new System.Drawing.Point(108, 74);
+            this.txttenmhmh.Location = new System.Drawing.Point(108, 53);
             this.txttenmhmh.Name = "txttenmhmh";
             this.txttenmhmh.Size = new System.Drawing.Size(114, 20);
             this.txttenmhmh.TabIndex = 2;
             // 
             // txtmagvmh
             // 
-            this.txtmagvmh.Location = new System.Drawing.Point(327, 46);
+            this.txtmagvmh.Location = new System.Drawing.Point(327, 23);
             this.txtmagvmh.Name = "txtmagvmh";
             this.txtmagvmh.Size = new System.Drawing.Size(100, 20);
             this.txtmagvmh.TabIndex = 3;
             // 
             // txttongsotiet
             // 
-            this.txttongsotiet.Location = new System.Drawing.Point(327, 72);
+            this.txttongsotiet.Location = new System.Drawing.Point(327, 53);
             this.txttongsotiet.Name = "txttongsotiet";
             this.txttongsotiet.Size = new System.Drawing.Size(100, 20);
             this.txttongsotiet.TabIndex = 4;
             // 
             // txtsotiethoc
             // 
-            this.txtsotiethoc.Location = new System.Drawing.Point(327, 98);
+            this.txtsotiethoc.Location = new System.Drawing.Point(327, 80);
             this.txtsotiethoc.Name = "txtsotiethoc";
             this.txtsotiethoc.Size = new System.Drawing.Size(100, 20);
             this.txtsotiethoc.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 100);
+            this.label1.Location = new System.Drawing.Point(228, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 14);
             this.label1.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(228, 78);
+            this.label2.Location = new System.Drawing.Point(228, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 14);
             this.label2.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 48);
+            this.label3.Location = new System.Drawing.Point(228, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 14);
             this.label3.TabIndex = 9;
@@ -130,7 +130,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 80);
+            this.label4.Location = new System.Drawing.Point(19, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 14);
             this.label4.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 51);
+            this.label5.Location = new System.Drawing.Point(19, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 14);
             this.label5.TabIndex = 11;
@@ -150,7 +150,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 104);
+            this.label6.Location = new System.Drawing.Point(19, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 14);
             this.label6.TabIndex = 27;
@@ -158,28 +158,29 @@
             // 
             // txtmahvmh
             // 
-            this.txtmahvmh.Location = new System.Drawing.Point(108, 98);
+            this.txtmahvmh.Location = new System.Drawing.Point(108, 80);
             this.txtmahvmh.Name = "txtmahvmh";
             this.txtmahvmh.Size = new System.Drawing.Size(114, 20);
             this.txtmahvmh.TabIndex = 26;
             // 
-            // btnXemLai
+            // btnDanhSachMH
             // 
-            this.btnXemLai.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXemLai.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnXemLai.Location = new System.Drawing.Point(173, 8);
-            this.btnXemLai.Name = "btnXemLai";
-            this.btnXemLai.Size = new System.Drawing.Size(99, 35);
-            this.btnXemLai.TabIndex = 25;
-            this.btnXemLai.Text = "Load Dữ Liệu";
-            this.btnXemLai.Click += new System.EventHandler(this.btsua_Click);
+            this.btnDanhSachMH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDanhSachMH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnDanhSachMH.Image = global::qlhocvien.Properties.Resources.user_accept;
+            this.btnDanhSachMH.Location = new System.Drawing.Point(346, 118);
+            this.btnDanhSachMH.Name = "btnDanhSachMH";
+            this.btnDanhSachMH.Size = new System.Drawing.Size(99, 30);
+            this.btnDanhSachMH.TabIndex = 25;
+            this.btnDanhSachMH.Text = "Danh Sách";
+            this.btnDanhSachMH.Click += new System.EventHandler(this.btnDanhSachMH_Click);
             // 
             // btnThemMH
             // 
             this.btnThemMH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThemMH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnThemMH.Image = global::qlhocvien.Properties.Resources.add;
-            this.btnThemMH.Location = new System.Drawing.Point(62, 134);
+            this.btnThemMH.Location = new System.Drawing.Point(22, 118);
             this.btnThemMH.Name = "btnThemMH";
             this.btnThemMH.Size = new System.Drawing.Size(95, 30);
             this.btnThemMH.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
@@ -192,35 +193,37 @@
             this.btnXoaMH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnXoaMH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnXoaMH.Image = global::qlhocvien.Properties.Resources.delete;
-            this.btnXoaMH.Location = new System.Drawing.Point(291, 134);
+            this.btnXoaMH.Location = new System.Drawing.Point(231, 118);
             this.btnXoaMH.Name = "btnXoaMH";
             this.btnXoaMH.Size = new System.Drawing.Size(95, 30);
             this.btnXoaMH.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btnXoaMH.TabIndex = 49;
             this.btnXoaMH.Text = " Xóa";
+            this.btnXoaMH.Click += new System.EventHandler(this.btnXoaMH_Click);
             // 
             // btnSuaMH
             // 
             this.btnSuaMH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSuaMH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnSuaMH.Image = global::qlhocvien.Properties.Resources.refresh;
-            this.btnSuaMH.Location = new System.Drawing.Point(177, 134);
+            this.btnSuaMH.Location = new System.Drawing.Point(127, 118);
             this.btnSuaMH.Name = "btnSuaMH";
             this.btnSuaMH.Size = new System.Drawing.Size(95, 30);
             this.btnSuaMH.TabIndex = 48;
             this.btnSuaMH.Text = "Sửa";
+            this.btnSuaMH.Click += new System.EventHandler(this.btnSuaMH_Click);
             // 
             // MonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 320);
+            this.ClientSize = new System.Drawing.Size(457, 308);
             this.Controls.Add(this.btnThemMH);
             this.Controls.Add(this.btnXoaMH);
             this.Controls.Add(this.btnSuaMH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtmahvmh);
-            this.Controls.Add(this.btnXemLai);
+            this.Controls.Add(this.btnDanhSachMH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -259,7 +262,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox txtmahvmh;
-        private DevComponents.DotNetBar.ButtonX btnXemLai;
+        private DevComponents.DotNetBar.ButtonX btnDanhSachMH;
         private DevComponents.DotNetBar.ButtonX btnThemMH;
         private DevComponents.DotNetBar.ButtonX btnXoaMH;
         private DevComponents.DotNetBar.ButtonX btnSuaMH;

@@ -138,40 +138,6 @@ namespace QLHocSinh
 			}
 		}
 
-		private void Btluu_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				if (txtmagv.Text == "" || txttengv.Text == "" || cbmakhoigv.Text == "")
-				{
-					MessageBox.Show("Bạn chưa nhập đủ điều kiện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-				else if (txtmagv.Text.ToString().Length > 5)
-				{
-					MessageBox.Show("Mã Giáo Viên không được quá năm kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					txtmagv.Text = "";
-				}
-				else if (txttengv.Text.ToString().Length > 20)
-				{
-					MessageBox.Show("Tên Giáo Viên phải Nhỏ Hơn 20 Ký Tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					txttengv.Text = "";
-				}
-				else
-				{
-					string sql = "";
-					sql = "INSERT INTO GiaoVien(MaGV,TenGV,MaKhoa) VALUES('" + txtmagv.Text + "','" + txttengv.Text + "','" + cbmakhoigv.Text + "')";
-
-					MessageBox.Show("Lưu thành công Giáo Viên : " + txtmagv.Text + " ");
-					this.DanhSachGV();
-
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Lỗi: " + ex.Message);
-			}
-		}
-
 		private void Timgv_Click(object sender, EventArgs e)
 		{
 			List<GV> lst = DanhSachGV();
