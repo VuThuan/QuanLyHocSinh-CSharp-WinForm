@@ -1,0 +1,17 @@
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.exe.config
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLyHocSinh.csproj.GenerateResource.cache
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLyHocSinh.csprojAssemblyReference.cache
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.GiangVien.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.Khoi.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.MonHoc.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.QLHocSinh.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.QLHocSinh.vi-VN.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLHocSinh.Login.resources

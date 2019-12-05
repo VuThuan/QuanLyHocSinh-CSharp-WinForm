@@ -1,0 +1,85 @@
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QuanLySinhVien.csprojAssemblyReference.cache
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.Login.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.cache
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QuanLySinhVien.csproj.CoreCompileInputs.cache
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\qlhocvien.exe
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\qlhocvien.pdb
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\bin\Debug\qlhocvien.exe
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\bin\Debug\qlhocvien.pdb
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.GiangVien.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.Khoa.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.MonHoc.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.QLSinhVien.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QLSinhVien.QLSinhVien.vi-VN.resources
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\thien\Desktop\[Sharecode.vn] Source code do an quan ly hoc vien\[Sharecode.vn] Source code do an quan ly hoc vien\qlhocvien\obj\Debug\QuanLySinhVien.csproj.CopyComplete
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\bin\Debug\qlhocvien.exe
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\bin\Debug\qlhocvien.pdb
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.GiangVien.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.Khoa.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.Login.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.MonHoc.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.vi-VN.resources
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.cache
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.CoreCompileInputs.cache
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.CopyComplete
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\qlhocvien.exe
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\qlhocvien.pdb
+C:\Users\thien\Desktop\QLSV_TTN\QLSV_TTN\QLSinhVien\obj\Debug\QuanLySinhVien.csprojAssemblyReference.cache
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\bin\Debug\qlhocvien.exe.config
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\bin\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\bin\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QuanLySinhVien.csprojAssemblyReference.cache
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.GiangVien.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.Khoa.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.Login.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.MonHoc.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.vi-VN.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.cache
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.CopyComplete
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\qlsv_ttn_n8_mta2019-e36028b5902b23f7e4cf78575d803b8ef3a706a7\QLSinhVien\obj\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\bin\Debug\qlhocvien.exe.config
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\bin\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\bin\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QuanLySinhVien.csprojAssemblyReference.cache
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.GiangVien.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.Khoa.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.Login.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.MonHoc.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.vi-VN.resources
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.cache
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.CopyComplete
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Tài liệu\C# Winform BTL\QuanLySinhVien\QLSinhVien\obj\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.exe.config
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLySinhVien.csprojAssemblyReference.cache
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.GiangVien.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.Khoa.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.Login.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.MonHoc.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.Properties.Resources.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QLSinhVien.QLSinhVien.vi-VN.resources
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.GenerateResource.cache
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\vi-VN\qlhocvien.resources.dll
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\QuanLySinhVien.csproj.CopyComplete
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.exe
+C:\Users\vuthu\OneDrive\Máy tính\C#_BaiTapLon\QLSinhVien\obj\Debug\qlhocvien.pdb
