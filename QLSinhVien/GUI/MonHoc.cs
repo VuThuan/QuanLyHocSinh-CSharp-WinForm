@@ -48,8 +48,7 @@ namespace QLHocSinh
                         TenMH = reader.GetValue(1).ToString(),
                         SoTiet = reader.GetValue(2).ToString(),
                         TongSoTiet = reader.GetValue(3).ToString(),
-                        MaGV = reader.GetValue(4).ToString(),
-                        MaHS = reader.GetValue(5).ToString()
+                        MaGV = reader.GetValue(4).ToString()
                     };
                     lst.Add(mh);
                 }
@@ -74,7 +73,6 @@ namespace QLHocSinh
             showdatamonhoc.Columns[2].HeaderText = "Số tiết";
             showdatamonhoc.Columns[3].HeaderText = "Tổng số tiết";
             showdatamonhoc.Columns[4].HeaderText = "Mã giáo viên";
-            showdatamonhoc.Columns[5].HeaderText = "Mã học sinh";
         }
 
         private bool ValidateTextbox()
@@ -83,8 +81,7 @@ namespace QLHocSinh
                 string.IsNullOrEmpty(txttenmhmh.Text) ||
                 string.IsNullOrEmpty(txtsotiethoc.Text) ||
                 string.IsNullOrEmpty(txttongsotiet.Text) ||
-                string.IsNullOrEmpty(txtmagvmh.Text) ||
-                string.IsNullOrEmpty(txtmahvmh.Text)
+                string.IsNullOrEmpty(txtmagvmh.Text) 
                 )
             {
                 return true;
@@ -102,7 +99,6 @@ namespace QLHocSinh
             txtsotiethoc.Text = "";
             txttongsotiet.Text = "";
             txtmagvmh.Text = "";
-            txtmahvmh.Text = "";
         }
 
         private void btnThemMH_Click(object sender, EventArgs e)
@@ -116,7 +112,7 @@ namespace QLHocSinh
                 else
                 {
                     //	ClearTextbox();
-                    string query = "INSERT INTO MonHoc(MaMH,TenMH,SoTiet, TongSoTiet, MaGV, MaHS) VALUES('" + txtmamhmh.Text + "','" + txttenmhmh.Text + "','" + txtsotiethoc.Text + "', '" + txttongsotiet.Text + "', '" + txtmagvmh.Text + "', '" + txtmahvmh.Text + "')";
+                    string query = "INSERT INTO MonHoc(MaMH,TenMH,SoTiet, TongSoTiet, MaGV) VALUES('" + txtmamhmh.Text + "','" + txttenmhmh.Text + "','" + txtsotiethoc.Text + "', '" + txttongsotiet.Text + "', '" + txtmagvmh.Text + "')";
                     using (SqlConnection connection = DataConnection.GetConnection())
                     {
                         connection.Open();
@@ -149,7 +145,6 @@ namespace QLHocSinh
                     txtmagvmh.Text = showdatamonhoc.Rows[row].Cells[4].Value.ToString();
                     txttongsotiet.Text = showdatamonhoc.Rows[row].Cells[3].Value.ToString();
                     txtsotiethoc.Text = showdatamonhoc.Rows[row].Cells[2].Value.ToString();
-                    txtmahvmh.Text = showdatamonhoc.Rows[row].Cells[5].Value.ToString();
                 }
 
             }
@@ -163,14 +158,14 @@ namespace QLHocSinh
         {
             try
             {
-                if (txtmamhmh.Text == "" || txttenmhmh.Text == "" || txtsotiethoc.Text == "" || txttongsotiet.Text == "" || txtmagvmh.Text == "" || txtmahvmh.Text == "")
+                if (txtmamhmh.Text == "" || txttenmhmh.Text == "" || txtsotiethoc.Text == "" || txttongsotiet.Text == "" || txtmagvmh.Text == "")
                 {
                     MessageBox.Show("Phải Nhập đủ Thông Tin");
                 }
 
                 else if (txtmamhmh.Text != "")
                 {
-                    string sql = "UPDATE MonHoc SET TenMH ='" + txttenmhmh.Text + "',  SoTiet='" + txtsotiethoc.Text + "',  TongSoTiet='" + txttongsotiet.Text + "',  MaGV='" + txtmagvmh.Text + "',  MaHS='" + txtmahvmh.Text + "' WHERE MaMH='" + txtmamhmh.Text + "'";
+                    string sql = "UPDATE MonHoc SET TenMH ='" + txttenmhmh.Text + "',  SoTiet='" + txtsotiethoc.Text + "',  TongSoTiet='" + txttongsotiet.Text + "',  MaGV='" + txtmagvmh.Text + "' WHERE MaMH='" + txtmamhmh.Text + "'";
                     using (SqlConnection connection = DataConnection.GetConnection())
                     {
                         connection.Open();

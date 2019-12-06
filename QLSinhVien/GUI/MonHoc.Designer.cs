@@ -40,8 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtmahvmh = new System.Windows.Forms.TextBox();
             this.btnDanhSachMH = new DevComponents.DotNetBar.ButtonX();
             this.btnThemMH = new DevComponents.DotNetBar.ButtonX();
             this.btnXoaMH = new DevComponents.DotNetBar.ButtonX();
@@ -91,16 +89,16 @@
             // 
             // txtsotiethoc
             // 
-            this.txtsotiethoc.Location = new System.Drawing.Point(327, 80);
+            this.txtsotiethoc.Location = new System.Drawing.Point(108, 84);
             this.txtsotiethoc.Name = "txtsotiethoc";
-            this.txtsotiethoc.Size = new System.Drawing.Size(100, 20);
+            this.txtsotiethoc.Size = new System.Drawing.Size(114, 20);
             this.txtsotiethoc.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 82);
+            this.label1.Location = new System.Drawing.Point(19, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 14);
             this.label1.TabIndex = 7;
@@ -145,23 +143,6 @@
             this.label5.Size = new System.Drawing.Size(83, 14);
             this.label5.TabIndex = 11;
             this.label5.Text = "Mã Môn Học";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 14);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Mã Học Sinh";
-            // 
-            // txtmahvmh
-            // 
-            this.txtmahvmh.Location = new System.Drawing.Point(108, 80);
-            this.txtmahvmh.Name = "txtmahvmh";
-            this.txtmahvmh.Size = new System.Drawing.Size(114, 20);
-            this.txtmahvmh.TabIndex = 26;
             // 
             // btnDanhSachMH
             // 
@@ -221,8 +202,6 @@
             this.Controls.Add(this.btnThemMH);
             this.Controls.Add(this.btnXoaMH);
             this.Controls.Add(this.btnSuaMH);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtmahvmh);
             this.Controls.Add(this.btnDanhSachMH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -260,8 +239,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox txtmahvmh;
         private DevComponents.DotNetBar.ButtonX btnDanhSachMH;
         private DevComponents.DotNetBar.ButtonX btnThemMH;
         private DevComponents.DotNetBar.ButtonX btnXoaMH;

@@ -13,6 +13,5 @@ namespace qlhocvien.DAL
         public string SoTiet { get; set; }
         public string TongSoTiet { get; set; }
         public string MaGV { get; set; }
-        public string MaHS { get; set; }
     }
 }
