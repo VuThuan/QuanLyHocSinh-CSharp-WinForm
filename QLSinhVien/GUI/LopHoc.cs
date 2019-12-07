@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using qlhocvien.DAL;
+using qlhocvien.GUI;
 
 namespace QLHocSinh
 {
@@ -48,7 +49,7 @@ namespace QLHocSinh
                     {
                         MaLop = reader.GetValue(0).ToString(),
                         TenLop = reader.GetValue(1).ToString(),
-                        MaGVCN = reader.GetValue(2).ToString()
+                        MaGVCN = reader.GetValue(2).ToString(),
                     };
                     lst.Add(lopHoc);
                 }
@@ -92,6 +93,7 @@ namespace QLHocSinh
             showdatalophoc.Columns[0].HeaderText = "Mã Lớp Học";
             showdatalophoc.Columns[1].HeaderText = "Tên Lớp Học";
             showdatalophoc.Columns[2].HeaderText = "Mã GVCN";
+            addButtonForDataGridView();
         }
 
         private void btnThemLH_Click(object sender, EventArgs e)
@@ -126,6 +128,20 @@ namespace QLHocSinh
             }
         }
 
+        private void addButtonForDataGridView()
+        {
+            DataGridViewButtonColumn SelectButton = new DataGridViewButtonColumn();
+            SelectButton.Name = "Danh Sách HS";
+            SelectButton.Text = "Xem";
+            SelectButton.DefaultCellStyle.ForeColor = Color.Blue;
+            SelectButton.DefaultCellStyle.BackColor = Color.DarkRed;
+            SelectButton.UseColumnTextForButtonValue = true;
+            if (showdatalophoc.Columns["Danh Sách HS"] == null)
+            {
+                showdatalophoc.Columns.Insert(3, SelectButton);
+            }
+        }
+
         private void showdatakhoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -136,6 +152,12 @@ namespace QLHocSinh
                     txtMaLop.Text = showdatalophoc.Rows[index].Cells[0].Value.ToString();
                     txtTenLop.Text = showdatalophoc.Rows[index].Cells[1].Value.ToString();
                     txtMaGVCN.Text = showdatalophoc.Rows[index].Cells[2].Value.ToString();
+                }
+                if (e.ColumnIndex == showdatalophoc.Columns["Danh Sách HS"].Index)
+                {
+                    DanhSachHocSinhThuocLop ds = new DanhSachHocSinhThuocLop();
+                    ds.maLopHoc = txtMaLop.Text;
+                    ds.ShowDialog();
                 }
             }
             catch (Exception)

@@ -59,6 +59,14 @@
             this.btsua = new DevComponents.DotNetBar.ButtonX();
             this.btthem = new DevComponents.DotNetBar.ButtonX();
             this.btxoa = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.gdangnhap = new System.Windows.Forms.GroupBox();
+            this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.gdangxuat = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
@@ -72,11 +80,6 @@
             this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem6 = new DevComponents.DotNetBar.LabelItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.gdangxuat = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
             this.hethong = new DevComponents.DotNetBar.RibbonTabItem();
             this.qlhv = new DevComponents.DotNetBar.RibbonTabItem();
             this.giangvienkhoa = new DevComponents.DotNetBar.RibbonTabItem();
@@ -92,28 +95,25 @@
             this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
-            this.gdangnhap = new System.Windows.Forms.GroupBox();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
-            this.gdangxuat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showdata)).BeginInit();
             this.gdangnhap.SuspendLayout();
+            this.gdangxuat.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showdata)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.hethong,
@@ -352,6 +352,75 @@
             this.btxoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btxoa.Click += new System.EventHandler(this.Btxoa_Click);
             // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.ribbonPanel1.Controls.Add(this.gdangnhap);
+            this.ribbonPanel1.Controls.Add(this.gdangxuat);
+            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            // 
+            // gdangnhap
+            // 
+            this.gdangnhap.BackColor = System.Drawing.Color.PowderBlue;
+            this.gdangnhap.Controls.Add(this.buttonX6);
+            this.gdangnhap.Controls.Add(this.buttonX3);
+            resources.ApplyResources(this.gdangnhap, "gdangnhap");
+            this.gdangnhap.Name = "gdangnhap";
+            this.gdangnhap.TabStop = false;
+            // 
+            // buttonX6
+            // 
+            this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonX6.Image = ((System.Drawing.Image)(resources.GetObject("buttonX6.Image")));
+            resources.ApplyResources(this.buttonX6, "buttonX6");
+            this.buttonX6.Name = "buttonX6";
+            this.buttonX6.Click += new System.EventHandler(this.ButtonX6_Click);
+            // 
+            // buttonX3
+            // 
+            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonX3.Image = ((System.Drawing.Image)(resources.GetObject("buttonX3.Image")));
+            this.buttonX3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.buttonX3, "buttonX3");
+            this.buttonX3.Name = "buttonX3";
+            this.buttonX3.Click += new System.EventHandler(this.ButtonX3_Click);
+            // 
+            // gdangxuat
+            // 
+            this.gdangxuat.BackColor = System.Drawing.Color.PowderBlue;
+            this.gdangxuat.Controls.Add(this.label9);
+            this.gdangxuat.Controls.Add(this.buttonX4);
+            this.gdangxuat.Controls.Add(this.buttonX5);
+            resources.ApplyResources(this.gdangxuat, "gdangxuat");
+            this.gdangxuat.Name = "gdangxuat";
+            this.gdangxuat.TabStop = false;
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // buttonX4
+            // 
+            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonX4.Image = ((System.Drawing.Image)(resources.GetObject("buttonX4.Image")));
+            resources.ApplyResources(this.buttonX4, "buttonX4");
+            this.buttonX4.Name = "buttonX4";
+            this.buttonX4.Click += new System.EventHandler(this.ButtonX4_Click);
+            // 
+            // buttonX5
+            // 
+            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.buttonX5.Image = ((System.Drawing.Image)(resources.GetObject("buttonX5.Image")));
+            resources.ApplyResources(this.buttonX5, "buttonX5");
+            this.buttonX5.Name = "buttonX5";
+            this.buttonX5.Click += new System.EventHandler(this.ButtonX5_Click);
+            // 
             // ribbonPanel4
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
@@ -449,47 +518,6 @@
             this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
             this.buttonItem2.Name = "buttonItem2";
             resources.ApplyResources(this.buttonItem2, "buttonItem2");
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.ribbonPanel1.Controls.Add(this.gdangnhap);
-            this.ribbonPanel1.Controls.Add(this.gdangxuat);
-            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            // 
-            // gdangxuat
-            // 
-            this.gdangxuat.BackColor = System.Drawing.Color.PowderBlue;
-            this.gdangxuat.Controls.Add(this.label9);
-            this.gdangxuat.Controls.Add(this.buttonX4);
-            this.gdangxuat.Controls.Add(this.buttonX5);
-            resources.ApplyResources(this.gdangxuat, "gdangxuat");
-            this.gdangxuat.Name = "gdangxuat";
-            this.gdangxuat.TabStop = false;
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // buttonX4
-            // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX4.Image = ((System.Drawing.Image)(resources.GetObject("buttonX4.Image")));
-            resources.ApplyResources(this.buttonX4, "buttonX4");
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Click += new System.EventHandler(this.ButtonX4_Click);
-            // 
-            // buttonX5
-            // 
-            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX5.Image = ((System.Drawing.Image)(resources.GetObject("buttonX5.Image")));
-            resources.ApplyResources(this.buttonX5, "buttonX5");
-            this.buttonX5.Name = "buttonX5";
-            this.buttonX5.Click += new System.EventHandler(this.ButtonX5_Click);
             // 
             // hethong
             // 
@@ -604,34 +632,6 @@
             this.buttonItem16.Name = "buttonItem16";
             resources.ApplyResources(this.buttonItem16, "buttonItem16");
             // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX3.Image = ((System.Drawing.Image)(resources.GetObject("buttonX3.Image")));
-            this.buttonX3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.buttonX3, "buttonX3");
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Click += new System.EventHandler(this.ButtonX3_Click);
-            // 
-            // buttonX6
-            // 
-            this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX6.Image = ((System.Drawing.Image)(resources.GetObject("buttonX6.Image")));
-            resources.ApplyResources(this.buttonX6, "buttonX6");
-            this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Click += new System.EventHandler(this.ButtonX6_Click);
-            // 
-            // gdangnhap
-            // 
-            this.gdangnhap.BackColor = System.Drawing.Color.PowderBlue;
-            this.gdangnhap.Controls.Add(this.buttonX6);
-            this.gdangnhap.Controls.Add(this.buttonX3);
-            resources.ApplyResources(this.gdangnhap, "gdangnhap");
-            this.gdangnhap.Name = "gdangnhap";
-            this.gdangnhap.TabStop = false;
-            // 
             // QLHocSinh
             // 
             resources.ApplyResources(this, "$this");
@@ -649,12 +649,12 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.gdangnhap.ResumeLayout(false);
             this.gdangxuat.ResumeLayout(false);
             this.gdangxuat.PerformLayout();
+            this.ribbonPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.showdata)).EndInit();
-            this.gdangnhap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
