@@ -11,16 +11,16 @@ using System.Data.SqlClient;
 
 namespace QLHocSinh
 {
-    public partial class Khoi : Form
+    public partial class LopHoc : Form
     {
       
-        public Khoi()
+        public LopHoc()
         {
             InitializeComponent();
         }
-         public void DSKhoa()
+         public void DSLopHoc()
          {
-			string query = "select * from Khoi";
+			string query = "select * from LopHoc";
 			using (SqlConnection connection = DataConnection.GetConnection())
 			{
 				connection.Open();
@@ -32,9 +32,11 @@ namespace QLHocSinh
 				connection.Dispose();
 			}
          }
-        private void Khoa_Load(object sender, EventArgs e)
+
+       
+        private void LopHoc_Load(object sender, EventArgs e)
         {
-			DSKhoa();
+			DSLopHoc();
         }
 
         private void showdatakhoa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -44,14 +46,15 @@ namespace QLHocSinh
                 int index = e.RowIndex;
                 if (index >= 0)
                 {
-                    txtmakhoi.Text = showdatakhoa.Rows[index].Cells[0].Value.ToString();
-                    txttenkhoi.Text = showdatakhoa.Rows[index].Cells[1].Value.ToString();
+                    txtMaLop.Text = showdatakhoa.Rows[index].Cells[0].Value.ToString();
+                    txtTenLop.Text = showdatakhoa.Rows[index].Cells[1].Value.ToString();
+                    txtMaGVCN.Text = showdatakhoa.Rows[index].Cells[2].Value.ToString();
                 }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Hãy Chọn Mã Khối hoặc Tên Khối");
+                MessageBox.Show("Hãy Chọn Mã Lớp Học hoặc Tên Lớp Học");
             }
         }
 
@@ -59,7 +62,7 @@ namespace QLHocSinh
         {
             try
             {
-                this.DSKhoa();
+                this.DSLopHoc();
             }
             catch (Exception)
             {

@@ -21,7 +21,6 @@ C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\bin\D
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\bin\Debug\vi-VN\qlhocvien.resources.dll
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QuanLyHocSinh.csprojAssemblyReference.cache
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.GiangVien.resources
-C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.Khoi.resources
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.Login.resources
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.MonHoc.resources
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.QLHocSinh.resources
@@ -32,3 +31,4 @@ C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\D
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\qlhocvien.exe
 C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\qlhocvien.pdb
+C:\Users\vuthu\OneDrive\Máy tính\QuanLyHocSinh-CSharp-WinForm\QLSinhVien\obj\Debug\QLHocSinh.LopHoc.resources

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
@@ -30,7 +31,7 @@ namespace QLHocSinh
 						Tuoi = int.Parse(reader.GetValue(2).ToString()),
 						GioiTinh = reader.GetValue(3).ToString(),
 						NoiSinh = reader.GetValue(4).ToString(),
-						MaKhoi = reader.GetValue(5).ToString()
+						MaLop = reader.GetValue(5).ToString()
 					};
 					lst.Add(sv);
 				}
@@ -54,7 +55,7 @@ namespace QLHocSinh
 		public bool Check()
 		{
 			if (string.IsNullOrEmpty(txtmahv.Text) ||
-				string.IsNullOrEmpty(cbmakhoi.Text) ||
+				string.IsNullOrEmpty(cbmalop.Text) ||
 				string.IsNullOrEmpty(txthoten.Text) ||
 				string.IsNullOrEmpty(txttuoi.Text) ||
 				string.IsNullOrEmpty(cbgioitinh.Text) ||
@@ -70,7 +71,7 @@ namespace QLHocSinh
 		public void ClearTextbox()
 		{
 			txtmahv.Text = "";
-			cbmakhoi.Text = "Chọn";
+			cbmalop.Text = "Chọn";
 			txthoten.Text = "";
 			txttuoi.Text = "";
 			cbgioitinh.Text = "Chọn";
@@ -83,19 +84,18 @@ namespace QLHocSinh
 			{
 				if (Check() == true)
 				{
-                    HocSinh hocSinh = new HocSinh()
-					{
-						MaHS = txtmahv.Text.Trim(),
-						TenHS = txthoten.Text.Trim(),
-						Tuoi = int.Parse(txttuoi.Text),
-						GioiTinh = cbgioitinh.Text,
-						NoiSinh = txtnoisinh.Text.Trim(),
-						MaKhoi = cbmakhoi.Text.Trim()
-					};
-					HocSinhDAL.AddStudent(hocSinh);
-					this.ButtonX1_Click(null, null);
-					ClearTextBox();
-				}
+                    string query = "INSERT INTO HocSinh(MaHS,TenHS,Tuoi, GioiTinh, NoiSinh, MaLop) VALUES('" + txtmahv.Text + "','" + txthoten.Text + "','" + txttuoi.Text + "','" + cbgioitinh.Text + "','" + txtnoisinh.Text + "','" + cbmalop.SelectedValue + "')";
+                    using (SqlConnection connection = DataConnection.GetConnection())
+                    {
+                        connection.Open();
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        connection.Dispose();
+                        MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.ButtonX1_Click(null, null);
+                    }
+                }
 				else
 				{
 					MessageBox.Show("Bạn cần nhập đủ tất cả các trường dữ liệu nhé.!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -147,7 +147,7 @@ namespace QLHocSinh
 		{
 			try
 			{
-				if (txtmahv.Text == "" || txthoten.Text == "" || txtnoisinh.Text == "" || cbmakhoi.Text == "" || cbgioitinh.Text == "[--Chọn Một--]" || cbmakhoi.Text == "" || cbmakhoi.Text == "[--Chọn Một--]")
+				if (txtmahv.Text == "" || txthoten.Text == "" || txtnoisinh.Text == "" || cbmalop.Text == "" || cbgioitinh.Text == "[--Chọn Một--]" || cbmalop.Text == "" || cbmalop.Text == "[--Chọn Một--]")
 				{
 					MessageBox.Show("Bạn chưa nhập đủ điều kiện", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
@@ -170,7 +170,7 @@ namespace QLHocSinh
 				else
 				{
 					string sql = "";
-					sql = "UPDATE HocSinh SET TenHS ='" + txthoten.Text + "', Tuoi ='" + txttuoi.Text + "',GioiTinh ='" + cbgioitinh.Text + "',Noisinh='" + txtnoisinh.Text + "',MaKhoi ='" + cbmakhoi.Text + "' WHERE MaHS='" + txtmahv.Text + "'";
+					sql = "UPDATE HocSinh SET TenHS ='" + txthoten.Text + "', Tuoi ='" + txttuoi.Text + "',GioiTinh ='" + cbgioitinh.Text + "',Noisinh='" + txtnoisinh.Text + "',MaLop ='" + cbmalop.SelectedValue + "' WHERE MaHS='" + txtmahv.Text + "'";
 					using (SqlConnection connection = DataConnection.GetConnection())
 					{
 						connection.Open();
@@ -192,7 +192,7 @@ namespace QLHocSinh
 		private void ClearTextBox()
 		{
 			txtmahv.Text = "";
-			cbmakhoi.Text = "Chọn";
+			cbmalop.Text = "Chọn";
 			txthoten.Text = "";
 			txttuoi.Text = "";
 			cbgioitinh.Text = "Chọn";
@@ -213,7 +213,7 @@ namespace QLHocSinh
 			showdata.Columns[2].HeaderText = "Tuổi";
 			showdata.Columns[3].HeaderText = "Giới tính";
 			showdata.Columns[4].HeaderText = "Nơi sinh";
-			showdata.Columns[5].HeaderText = "Mã Khối";
+			showdata.Columns[5].HeaderText = "Mã Lớp";
 		}
 
 		private void Btsearch_Click_1(object sender, EventArgs e)
@@ -329,7 +329,7 @@ namespace QLHocSinh
 			ColorDialog dlg = new ColorDialog();
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-				txtmahv.ForeColor = txthoten.ForeColor = cbmakhoi.ForeColor = gdangnhap.ForeColor = gdangxuat.ForeColor = groupBox1.ForeColor = groupBox2.ForeColor  = ribbonControl1.ForeColor = cbgioitinh.ForeColor = txttuoi.ForeColor = showdata.ForeColor = dlg.Color;
+				txtmahv.ForeColor = txthoten.ForeColor = cbmalop.ForeColor = gdangnhap.ForeColor = gdangxuat.ForeColor = groupBox1.ForeColor = groupBox2.ForeColor  = ribbonControl1.ForeColor = cbgioitinh.ForeColor = txttuoi.ForeColor = showdata.ForeColor = dlg.Color;
 			}
 		}
 
@@ -338,7 +338,7 @@ namespace QLHocSinh
 			FontDialog dlg = new FontDialog();
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-				txtmahv.Font = txthoten.Font = cbmakhoi.Font = gdangnhap.Font = gdangxuat.Font = groupBox1.Font = groupBox2.Font  = ribbonControl1.Font = cbgioitinh.Font = txttuoi.Font = showdata.Font = dlg.Font;
+				txtmahv.Font = txthoten.Font = cbmalop.Font = gdangnhap.Font = gdangxuat.Font = groupBox1.Font = groupBox2.Font  = ribbonControl1.Font = cbgioitinh.Font = txttuoi.Font = showdata.Font = dlg.Font;
 			}
 		}
 
@@ -349,7 +349,7 @@ namespace QLHocSinh
 		}
 		private void ButtonX8_Click(object sender, EventArgs e)
 		{
-			Khoi k = new Khoi();
+			LopHoc k = new LopHoc();
 			k.ShowDialog();
 		}
 
@@ -380,13 +380,14 @@ namespace QLHocSinh
 				txttuoi.Text = showdata.Rows[index].Cells[2].Value.ToString();
 				cbgioitinh.Text = showdata.Rows[index].Cells[3].Value.ToString();
 				txtnoisinh.Text = showdata.Rows[index].Cells[4].Value.ToString();
-				cbmakhoi.Text = showdata.Rows[index].Cells[5].Value.ToString();
+				cbmalop.Text = showdata.Rows[index].Cells[5].Value.ToString();
 			}
 		}
 
 		private void QlSinhVien_Load(object sender, EventArgs e)
 		{
 			txtmahv.Text = txtmahv.Text.Trim();
+            Load_CBLopHoc();
 			//	txtmahv.ReadOnly = true;
 			qlhv.Enabled = false;
 			giangvienkhoa.Enabled = false;
@@ -394,5 +395,20 @@ namespace QLHocSinh
 			gdangxuat.Visible = false;
 		}
 
+        private void Load_CBLopHoc()
+        {
+            using (SqlConnection connection = DataConnection.GetConnection())
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("select * from LopHoc", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                DataTable dt = new DataTable();
+
+                dt.Load(reader);
+                cbmalop.DataSource = dt;
+                cbmalop.DisplayMember = "TenLop";
+                cbmalop.ValueMember = "MaLop";
+            }
+        }
     }
 }

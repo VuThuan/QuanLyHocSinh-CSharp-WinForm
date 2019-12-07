@@ -8,7 +8,7 @@ namespace QLHocSinh
 {
 	public class DataConnection
     {
-        private static readonly string str = @"Data Source=DESKTOP-H3U36OI\SQLEXPRESS;Initial Catalog=QuanLyHocSinhTH;Integrated Security=True";
+        private static readonly string str = @"Data Source=DESKTOP-H3U36OI\SQLEXPRESS;Initial Catalog=QuanLyHocSinhTHCS;Integrated Security=True";
 		
 		public static SqlConnection GetConnection()
 		{

@@ -9,6 +9,7 @@ namespace qlhocvien.DAL
 	{
 		public string MaGV { get; set; }
 		public string TenGV { get; set; }
-		public string MaKhoa { get; set; }
-	}
+        public string Tuoi { get; set; }
+        public string DiaChi { get; set; }
+    }
 }

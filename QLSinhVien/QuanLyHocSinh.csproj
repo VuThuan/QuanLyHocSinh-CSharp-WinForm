@@ -68,7 +68,6 @@
     <Compile Include="BLL\HocSinhBLL.cs" />
     <Compile Include="DAL\GV.cs" />
     <Compile Include="DAL\HocSinh.cs" />
-    <Compile Include="DAL\HocSinhDAL.cs" />
     <Compile Include="DAL\MH.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="GUI\GiaoVien.cs">
@@ -77,11 +76,11 @@
     <Compile Include="GUI\GiaoVien.Designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Khoi.cs">
+    <Compile Include="GUI\LopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Khoi.Designer.cs">
-      <DependentUpon>Khoi.cs</DependentUpon>
+    <Compile Include="GUI\LopHoc.Designer.cs">
+      <DependentUpon>LopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -107,8 +106,8 @@
       <DependentUpon>GiaoVien.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Khoi.resx">
-      <DependentUpon>Khoi.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\LopHoc.resx">
+      <DependentUpon>LopHoc.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">

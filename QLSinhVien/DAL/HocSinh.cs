@@ -12,6 +12,6 @@ namespace QLHocSinh
 		public int Tuoi { get; set; }
 		public string GioiTinh { get; set; }
 		public string NoiSinh { get; set; }
-		public string MaKhoi { get; set; }
+		public string MaLop { get; set; }
 	}
 }

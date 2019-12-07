@@ -41,8 +41,9 @@ namespace QLHocSinh
 					{
 						MaGV = reader.GetValue(0).ToString(),
 						TenGV = reader.GetValue(1).ToString(),
-						MaKhoa = reader.GetValue(2).ToString()
-					};
+						Tuoi = reader.GetValue(2).ToString(),
+                        DiaChi = reader.GetValue(3).ToString(),
+                    };
 					lst.Add(gv);
 				}
 				reader.Close();
@@ -53,15 +54,18 @@ namespace QLHocSinh
 
 		private void ClearTextbox()
 		{
-			txtmagv.Text = "";
-			txttengv.Text = "";
-			cbmakhoigv.Text = "Chọn";
+			txtMaGV.Text = "";
+			txtTenGV.Text = "";
+			txtTuoiGV.Text = "";
+            txtDiaChiGV.Text = "";
 		}
 		private bool ValidateTextbox()
 		{
-			if (string.IsNullOrEmpty(txtmagv.Text) ||
-				string.IsNullOrEmpty(txttengv.Text) ||
-				string.IsNullOrEmpty(cbmakhoigv.Text))
+			if (string.IsNullOrEmpty(txtMaGV.Text) ||
+				string.IsNullOrEmpty(txtTenGV.Text) ||
+				string.IsNullOrEmpty(txtTuoiGV.Text)||
+                string.IsNullOrEmpty(txtDiaChiGV.Text)
+            )
 			{
 				return true;
 			}
@@ -81,7 +85,7 @@ namespace QLHocSinh
 				else
 				{
 					//	ClearTextbox();
-					string query = "INSERT INTO GiaoVien(MaGV,TenGV,MaKhoi) VALUES('" + txtmagv.Text + "','" + txttengv.Text + "','" + cbmakhoigv.Text + "')";
+					string query = "INSERT INTO GiaoVien(MaGV,TenGV,Tuoi, DiaChi) VALUES('" + txtMaGV.Text + "','" + txtTenGV.Text + "','" + txtTuoiGV.Text + "','" + txtDiaChiGV.Text + "')";
 					using (SqlConnection connection = DataConnection.GetConnection())
 					{
 						connection.Open();
@@ -106,14 +110,14 @@ namespace QLHocSinh
 		{
 			try
 			{
-				if (txtmagv.Text == "" || txttengv.Text == "" || cbmakhoigv.Text == "[--Chọn Một--]"  || cbmakhoigv.Text == "" )
+				if (txtMaGV.Text == "" || txtTenGV.Text == "" || txtTuoiGV.Text == ""  || txtDiaChiGV.Text == "" )
 				{
 					MessageBox.Show("Phải Nhập đủ Thông Tin");
 				}
 
-				else if (txtmagv.Text != "")
+				else if (txtMaGV.Text != "")
 				{
-					sql = "UPDATE GiaoVien SET TenGV ='" + txttengv.Text + "',  MaKhoi='" + cbmakhoigv.Text + "' WHERE MaGV='" + txtmagv.Text + "'";
+					sql = "UPDATE GiaoVien SET TenGV ='" + txtTenGV.Text + "',  Tuoi='" + txtTuoiGV.Text + "',  DiaChi='" + txtDiaChiGV.Text + "' WHERE MaGV='" + txtMaGV.Text + "'";
 					using (SqlConnection connection = DataConnection.GetConnection())
 					{
 						connection.Open();
@@ -202,18 +206,20 @@ namespace QLHocSinh
 			showdatagv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			showdatagv.Columns[0].HeaderText = "Mã Giáo Viên";
 			showdatagv.Columns[1].HeaderText = "Tên Giáo Viên";
-			showdatagv.Columns[2].HeaderText = "Mã khoa";
-		}
+			showdatagv.Columns[2].HeaderText = "Tuổi";
+            showdatagv.Columns[3].HeaderText = "Địa Chỉ";
+        }
 
 		private void showdatagv_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int index = e.RowIndex;
 			if (index >= 0)
 			{
-				txtmagv.Text = showdatagv.Rows[index].Cells[0].Value.ToString();
-				txttengv.Text = showdatagv.Rows[index].Cells[1].Value.ToString();
-				cbmakhoigv.Text = showdatagv.Rows[index].Cells[2].Value.ToString();
-			}
+				txtMaGV.Text = showdatagv.Rows[index].Cells[0].Value.ToString();
+				txtTenGV.Text = showdatagv.Rows[index].Cells[1].Value.ToString();
+				txtTuoiGV.Text = showdatagv.Rows[index].Cells[2].Value.ToString();
+                txtDiaChiGV.Text = showdatagv.Rows[index].Cells[3].Value.ToString();
+            }
 		}
 
 		private void btxoa_Click(object sender, EventArgs e)
@@ -222,10 +228,10 @@ namespace QLHocSinh
 			{
 				using (SqlConnection connection = DataConnection.GetConnection())
 				{
-					if (MessageBox.Show("Bạn có thật sự muốn xóa Giáo Viên có mã số: " + txtmagv.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+					if (MessageBox.Show("Bạn có thật sự muốn xóa Giáo Viên có mã số: " + txtMaGV.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
 					{
 						connection.Open();
-						string query = "delete from giaovien where magv=" + "'" + txtmagv.Text + "'";
+						string query = "delete from giaovien where magv=" + "'" + txtMaGV.Text + "'";
 						SqlCommand command = new SqlCommand(query, connection);
 						command.ExecuteNonQuery();
 						connection.Close();
