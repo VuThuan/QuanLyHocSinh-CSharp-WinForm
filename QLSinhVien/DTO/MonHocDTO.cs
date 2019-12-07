@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
-namespace qlhocvien.DAL
+namespace QLHocSinh.DTO
 {
-    class MH
+    class MonHocDTO
     {
         public string MaMH { get; set; }
         public string TenMH { get; set; }

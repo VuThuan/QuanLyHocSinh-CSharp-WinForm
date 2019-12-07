@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace qlhocvien.DAL
+namespace QLHocSinh.DTO
 {
-    class LH
+    class LopHocDTO
     {
         public string MaLop { get; set; }
         public string TenLop { get; set; }

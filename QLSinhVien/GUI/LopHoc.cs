@@ -8,7 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
-using qlhocvien.DAL;
+using QLHocSinh.DTO;
+using QLHocSinh.BLL;
 using qlhocvien.GUI;
 
 namespace QLHocSinh
@@ -20,8 +21,7 @@ namespace QLHocSinh
         {
             InitializeComponent();
         }
-
-       
+        LopHocBLL lopHoc_Bll = new LopHocBLL();
         private void LopHoc_Load(object sender, EventArgs e)
         {
             try
@@ -33,30 +33,6 @@ namespace QLHocSinh
 
                 MessageBox.Show("Lỗi Kết Nối, Vui Lòng Thử Lại");
             }
-        }
-
-        private List<LH> DanhSachLH()
-        {
-            List<LH> lst = new List<LH>();
-            using (SqlConnection connection = DataConnection.GetConnection())
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("select * from LopHoc", connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read() && reader.HasRows)
-                {
-                    LH lopHoc = new LH()
-                    {
-                        MaLop = reader.GetValue(0).ToString(),
-                        TenLop = reader.GetValue(1).ToString(),
-                        MaGVCN = reader.GetValue(2).ToString(),
-                    };
-                    lst.Add(lopHoc);
-                }
-                reader.Close();
-                connection.Close();
-            }
-            return lst;
         }
 
         private void ClearTextbox()
@@ -82,7 +58,7 @@ namespace QLHocSinh
 
         private void btnShowDSLop_Click(object sender, EventArgs e)
         {
-            List<LH> lst = this.DanhSachLH();
+            List<LopHocDTO> lst = lopHoc_Bll.ShowDataLopHoc();
             showdatalophoc.DataSource = lst;
             ShowGridViewGV();
         }
@@ -106,18 +82,14 @@ namespace QLHocSinh
                 }
                 else
                 {
-                    //	ClearTextbox();
-                    string query = "INSERT INTO LopHoc(MaLop,TenLop,MaGVCN) VALUES('" + txtMaLop.Text + "','" + txtTenLop.Text + "','" + txtMaGVCN.Text + "')";
-                    using (SqlConnection connection = DataConnection.GetConnection())
+                    LopHocDTO LopHoc = new LopHocDTO()
                     {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                        connection.Dispose();
-                        MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.btnShowDSLop_Click(null, null);
-                    }
+                        MaLop = txtMaLop.Text,
+                        TenLop = txtTenLop.Text,
+                        MaGVCN = txtMaGVCN.Text
+                    };
+                    lopHoc_Bll.UpdateLopHoc(LopHoc);
+                    this.btnShowDSLop_Click(null, null);
                 }
 
             }
@@ -152,12 +124,13 @@ namespace QLHocSinh
                     txtMaLop.Text = showdatalophoc.Rows[index].Cells[0].Value.ToString();
                     txtTenLop.Text = showdatalophoc.Rows[index].Cells[1].Value.ToString();
                     txtMaGVCN.Text = showdatalophoc.Rows[index].Cells[2].Value.ToString();
-                }
-                if (e.ColumnIndex == showdatalophoc.Columns["Danh Sách HS"].Index)
-                {
-                    DanhSachHocSinhThuocLop ds = new DanhSachHocSinhThuocLop();
-                    ds.maLopHoc = txtMaLop.Text;
-                    ds.ShowDialog();
+
+                    if (e.ColumnIndex == showdatalophoc.Columns[3].Index)
+                    {
+                        DanhSachHocSinhThuocLop ds = new DanhSachHocSinhThuocLop();
+                        ds.maLopHoc = txtMaLop.Text;
+                        ds.ShowDialog();
+                    }
                 }
             }
             catch (Exception)
@@ -178,17 +151,13 @@ namespace QLHocSinh
 
                 else if (txtMaLop.Text != "")
                 {
-                    string sql = "UPDATE LopHoc SET TenLop ='" + txtTenLop.Text + "',  MaGVCN='" + txtMaGVCN.Text + "' WHERE MaGV='" + txtMaLop.Text + "'";
-                    using (SqlConnection connection = DataConnection.GetConnection())
+                    LopHocDTO LopHoc = new LopHocDTO()
                     {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(sql, connection);
-                        command.ExecuteNonQuery();
-
-                        connection.Close();
-                        connection.Dispose();
-                    }
-                    MessageBox.Show("Đã sửa xong rồi nhé.!!!");
+                        MaLop = txtMaLop.Text,
+                        TenLop = txtTenLop.Text,
+                        MaGVCN = txtMaGVCN.Text
+                    };
+                    lopHoc_Bll.UpdateLopHoc(LopHoc);
                     this.btnShowDSLop_Click(null, null);
                 }
                 else
@@ -207,20 +176,8 @@ namespace QLHocSinh
         {
             try
             {
-                using (SqlConnection connection = DataConnection.GetConnection())
-                {
-                    if (MessageBox.Show("Bạn có thật sự muốn xóa Lớp Học có mã số: " + txtMaLop.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    {
-                        connection.Open();
-                        string query = "delete from LopHoc where MaLop=" + "'" + txtMaLop.Text + "'";
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                        connection.Dispose();
-                        this.btnShowDSLop_Click(null, null);
-                    }
-
-                }
+                lopHoc_Bll.DeleteLopHoc(txtMaLop.Text);
+                this.btnShowDSLop_Click(null, null);
             }
             catch (Exception ex)
             {

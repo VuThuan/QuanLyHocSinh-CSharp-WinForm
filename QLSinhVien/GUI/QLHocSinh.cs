@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using QLHocSinh.DTO;
+using QLHocSinh.BLL;
 
 namespace QLHocSinh
 {
@@ -14,44 +16,7 @@ namespace QLHocSinh
 		{
 			InitializeComponent();
 		}
-		public List<HocSinh> GetAllStudens()
-		{
-			List<HocSinh> lst = new List<HocSinh>();
-			using (SqlConnection connection = DataConnection.GetConnection())
-			{
-				connection.Open();
-				SqlCommand command = new SqlCommand("select * from HocSinh", connection);
-				SqlDataReader reader = command.ExecuteReader();
-				while (reader.Read() && reader.HasRows)
-				{
-                    HocSinh sv = new HocSinh()
-					{
-						MaHS = reader.GetValue(0).ToString(),
-						TenHS = reader.GetValue(1).ToString(),
-						Tuoi = int.Parse(reader.GetValue(2).ToString()),
-						GioiTinh = reader.GetValue(3).ToString(),
-						NoiSinh = reader.GetValue(4).ToString(),
-						MaLop = reader.GetValue(5).ToString()
-					};
-					lst.Add(sv);
-				}
-				connection.Close();
-				connection.Dispose();
-			}
-			return lst;
-		}
-
-		private void ButtonItem29_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				this.GetAllStudens();
-			}
-			catch
-			{
-				throw;
-			}
-		}
+		HocSinhBLL hocSinh_Bll = new HocSinhBLL();
 		public bool Check()
 		{
 			if (string.IsNullOrEmpty(txtMaHS.Text) ||
@@ -84,18 +49,18 @@ namespace QLHocSinh
 			{
 				if (Check() == true)
 				{
-                    string query = "INSERT INTO HocSinh(MaHS,TenHS,Tuoi, GioiTinh, NoiSinh, MaLop) VALUES('" + txtMaHS.Text + "','" + txtHoTen.Text + "','" + txtTuoi.Text + "','" + cbGioiTinh.Text + "','" + txtNoiSinh.Text + "','" + cbMaLop.SelectedValue + "')";
-                    using (SqlConnection connection = DataConnection.GetConnection())
-                    {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                        connection.Dispose();
-                        MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.btnDSHS_Click(null, null);
-                    }
-                }
+					HocSinhDTO HocSinh = new HocSinhDTO()
+					{
+						MaHS = txtMaHS.Text,
+						TenHS = txtHoTen.Text,
+						Tuoi = int.Parse(txtTuoi.Text),
+						GioiTinh = cbGioiTinh.Text,
+						NoiSinh = txtNoiSinh.Text,
+						MaLop = cbMaLop.SelectedValue.ToString()
+					};
+					hocSinh_Bll.InsertHocSinh(HocSinh);
+					btnDSHS_Click(null, null);
+				}
 				else
 				{
 					MessageBox.Show("Bạn cần nhập đủ tất cả các trường dữ liệu nhé.!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -116,19 +81,8 @@ namespace QLHocSinh
 				ok = MessageBox.Show("Bạn thực sự muốn xóa Học Sinh: " + txtHoTen.Text + " có mã số :" + txtMaHS.Text + " chứ?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				if (ok == DialogResult.Yes)
 				{
-
-					using (SqlConnection connection = DataConnection.GetConnection())
-					{
-						connection.Open();
-						string sql = "";
-						sql = "delete from HocSinh where MaHS='" + txtMaHS.Text + "'";
-						SqlCommand command = new SqlCommand(sql, connection);
-						command.ExecuteNonQuery();
-						connection.Close();
-						MessageBox.Show("Xóa Thành Công Rồi Nhé.!!!");
-						this.btnDSHS_Click(null, null);
-						ClearTextbox();
-					}
+					hocSinh_Bll.DeleteHocSinh(txtMaHS.Text);
+					btnDSHS_Click(null, null);
 				}
 				else
 				{
@@ -169,17 +123,16 @@ namespace QLHocSinh
 
 				else
 				{
-					string sql = "";
-					sql = "UPDATE HocSinh SET TenHS ='" + txtHoTen.Text + "', Tuoi ='" + txtTuoi.Text + "',GioiTinh ='" + cbGioiTinh.Text + "',Noisinh='" + txtNoiSinh.Text + "',MaLop ='" + cbMaLop.SelectedValue + "' WHERE MaHS='" + txtMaHS.Text + "'";
-					using (SqlConnection connection = DataConnection.GetConnection())
+					HocSinhDTO HocSinh = new HocSinhDTO()
 					{
-						connection.Open();
-						SqlCommand sqlcommand = new SqlCommand(sql, connection);
-						sqlcommand.ExecuteNonQuery();
-						MessageBox.Show("Đã sửa thông tin học sinh có Mã Số : " + txtMaHS.Text + " Thành Công");
-						connection.Close();
-						connection.Dispose();
-					}
+						MaHS = txtMaHS.Text,
+						TenHS = txtHoTen.Text,
+						Tuoi = int.Parse(txtTuoi.Text),
+						GioiTinh = cbGioiTinh.Text,
+						NoiSinh = txtNoiSinh.Text,
+						MaLop = cbMaLop.SelectedValue.ToString()
+					};
+					hocSinh_Bll.UpdateHocSinh(HocSinh);
 					ClearTextBox();
 					this.btnDSHS_Click(null, null);
 				}
@@ -201,7 +154,7 @@ namespace QLHocSinh
 
 		private void btnDSHS_Click(object sender, EventArgs e)
 		{
-			List<HocSinh> list = GetAllStudens();
+			List<HocSinhDTO> list = hocSinh_Bll.ShowDataHocSinh();
 			showdata.DataSource = list;
 			ShowGridView();
 		}
@@ -220,8 +173,8 @@ namespace QLHocSinh
 		{
 			string msv = "Tìm Theo Mã Học Sinh", ht = "Tìm Theo Tên Học Sinh";
 			string tim = "";
-			List<HocSinh> lst = GetAllStudens();
-			List<HocSinh> search = new List<HocSinh>();
+			List<HocSinhDTO> lst = hocSinh_Bll.ShowDataHocSinh();
+			List<HocSinhDTO> search = new List<HocSinhDTO>();
 			tim = txtSearch.Text.ToLower();
 			try
 			{

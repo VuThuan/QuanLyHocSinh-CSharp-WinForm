@@ -1,15 +1,19 @@
-﻿using qlhocvien.DAL;
+﻿using QLHocSinh.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using QLHocSinh.BLL;
+
 
 namespace QLHocSinh
 {
 	public partial class GiangVien : Form
 	{
 		private string sql;
+		GiaoVienBLL giaoVien_Bll = new GiaoVienBLL();
+		
 		public GiangVien()
 		{
 			InitializeComponent();
@@ -26,30 +30,6 @@ namespace QLHocSinh
 
 				MessageBox.Show("Lỗi Kết Nối, Vui Lòng Thử Lại");
 			}
-		}
-		public List<GV> DanhSachGV()
-		{
-			List<GV> lst = new List<GV>();
-			using (SqlConnection connection = DataConnection.GetConnection())
-			{
-				connection.Open();
-				SqlCommand command = new SqlCommand("select * from giaovien", connection);
-				SqlDataReader reader = command.ExecuteReader();
-				while (reader.Read() && reader.HasRows)
-				{
-					GV gv = new GV()
-					{
-						MaGV = reader.GetValue(0).ToString(),
-						TenGV = reader.GetValue(1).ToString(),
-						Tuoi = reader.GetValue(2).ToString(),
-                        DiaChi = reader.GetValue(3).ToString(),
-                    };
-					lst.Add(gv);
-				}
-				reader.Close();
-				connection.Close();
-			}
-			return lst;
 		}
 
 		private void ClearTextbox()
@@ -84,18 +64,15 @@ namespace QLHocSinh
 				}
 				else
 				{
-					//	ClearTextbox();
-					string query = "INSERT INTO GiaoVien(MaGV,TenGV,Tuoi, DiaChi) VALUES('" + txtMaGV.Text + "','" + txtTenGV.Text + "','" + txtTuoiGV.Text + "','" + txtDiaChiGV.Text + "')";
-					using (SqlConnection connection = DataConnection.GetConnection())
+					GiaoVienDTO giaoVien = new GiaoVienDTO()
 					{
-						connection.Open();
-						SqlCommand command = new SqlCommand(query, connection);
-						command.ExecuteNonQuery();
-						connection.Close();
-						connection.Dispose();
-						MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
-						this.btnShowDS_Click(null, null);
-					}
+						MaGV = txtMaGV.Text,
+						TenGV = txtTenGV.Text,
+						Tuoi = txtTuoiGV.Text,
+						DiaChi = txtDiaChiGV.Text
+					};
+					giaoVien_Bll.InsertGiaoVien(giaoVien);
+					this.btnShowDS_Click(null, null);
 				}
 
 			}
@@ -117,17 +94,15 @@ namespace QLHocSinh
 
 				else if (txtMaGV.Text != "")
 				{
-					sql = "UPDATE GiaoVien SET TenGV ='" + txtTenGV.Text + "',  Tuoi='" + txtTuoiGV.Text + "',  DiaChi='" + txtDiaChiGV.Text + "' WHERE MaGV='" + txtMaGV.Text + "'";
-					using (SqlConnection connection = DataConnection.GetConnection())
+					GiaoVienDTO giaoVien = new GiaoVienDTO()
 					{
-						connection.Open();
-						SqlCommand command = new SqlCommand(sql, connection);
-						command.ExecuteNonQuery();
-
-						connection.Close();
-						connection.Dispose();
-					}
-					MessageBox.Show("Đã sửa xong rồi nhé.!!!");
+						MaGV = txtMaGV.Text,
+						TenGV = txtTenGV.Text,
+						Tuoi = txtTuoiGV.Text,
+						DiaChi = txtDiaChiGV.Text
+					};
+					giaoVien_Bll.UpdateGiaoVien(giaoVien);
+					ClearTextbox();
 					this.btnShowDS_Click(null, null);
 				}
 				else
@@ -144,8 +119,8 @@ namespace QLHocSinh
 
 		private void btnSearchGV_Click(object sender, EventArgs e)
 		{
-			List<GV> lst = DanhSachGV();
-			List<GV> search = new List<GV>();
+			List<GiaoVienDTO> lst = giaoVien_Bll.ShowDataGiaoVien();
+			List<GiaoVienDTO> search = new List<GiaoVienDTO>();
 			string mgv = "Tìm Theo Mã Giáo Viên", tgv = "Tìm Theo Tên Giáo Viên";
 			string tim = "";
 			tim = txtSearch.Text.ToLower();
@@ -196,7 +171,7 @@ namespace QLHocSinh
 
 		private void btnShowDS_Click(object sender, EventArgs e)
 		{
-			List<GV> lst = this.DanhSachGV();
+			List<GiaoVienDTO> lst = giaoVien_Bll.ShowDataGiaoVien();
 			showdatagv.DataSource = lst;
 			ShowGridViewGV();
 		}
@@ -226,20 +201,8 @@ namespace QLHocSinh
 		{
 			try
 			{
-				using (SqlConnection connection = DataConnection.GetConnection())
-				{
-					if (MessageBox.Show("Bạn có thật sự muốn xóa Giáo Viên có mã số: " + txtMaGV.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-					{
-						connection.Open();
-						string query = "delete from giaovien where magv=" + "'" + txtMaGV.Text + "'";
-						SqlCommand command = new SqlCommand(query, connection);
-						command.ExecuteNonQuery();
-						connection.Close();
-						connection.Dispose();
-						this.btnShowDS_Click(null, null);
-					}
-					
-				}
+				giaoVien_Bll.DeleteGiaoVien(txtMaGV.Text);
+				this.btnShowDS_Click(null, null);
 			}
 			catch (Exception ex)
 			{
@@ -247,9 +210,5 @@ namespace QLHocSinh
 			}
 		}
 
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

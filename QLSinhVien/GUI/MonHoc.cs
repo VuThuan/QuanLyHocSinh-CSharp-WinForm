@@ -8,7 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
-using qlhocvien.DAL;
+using QLHocSinh.DTO;
+using QLHocSinh.BLL;
+
 
 namespace QLHocSinh
 {
@@ -18,6 +20,8 @@ namespace QLHocSinh
         {
             InitializeComponent();
         }
+
+        MonHocBLL monHoc_bll = new MonHocBLL();
 
         private void MonHoc_Load(object sender, EventArgs e)
         {
@@ -30,39 +34,6 @@ namespace QLHocSinh
                 MessageBox.Show("Lỗi");
 
             }
-        }
-
-        private List<MH> DanhSachMH()
-        {
-            List<MH> lst = new List<MH>();
-            using (SqlConnection connection = DataConnection.GetConnection())
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand("select * from MonHoc", connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read() && reader.HasRows)
-                {
-                    MH mh = new MH()
-                    {
-                        MaMH = reader.GetValue(0).ToString(),
-                        TenMH = reader.GetValue(1).ToString(),
-                        SoTiet = reader.GetValue(2).ToString(),
-                        TongSoTiet = reader.GetValue(3).ToString(),
-                        MaGV = reader.GetValue(4).ToString()
-                    };
-                    lst.Add(mh);
-                }
-                reader.Close();
-                connection.Close();
-            }
-            return lst;
-        }
-
-        private void btnDanhSachMH_Click(object sender, EventArgs e)
-        {
-            List<MH> lst = this.DanhSachMH();
-            showdatamonhoc.DataSource = lst;
-            showDataGridView();
         }
 
         private void showDataGridView()
@@ -81,7 +52,7 @@ namespace QLHocSinh
                 string.IsNullOrEmpty(txtTenMH.Text) ||
                 string.IsNullOrEmpty(txtSoTietHoc.Text) ||
                 string.IsNullOrEmpty(txtTongSoTiet.Text) ||
-                string.IsNullOrEmpty(txtMaGVMH.Text) 
+                string.IsNullOrEmpty(txtMaGVMH.Text)
                 )
             {
                 return true;
@@ -101,6 +72,14 @@ namespace QLHocSinh
             txtMaGVMH.Text = "";
         }
 
+
+        private void btnDanhSachMH_Click(object sender, EventArgs e)
+        {
+            List<MonHocDTO> lst = monHoc_bll.ShowDataMonHoc();
+            showdatamonhoc.DataSource = lst;
+            showDataGridView();
+        }
+
         private void btnThemMH_Click(object sender, EventArgs e)
         {
             try
@@ -111,18 +90,16 @@ namespace QLHocSinh
                 }
                 else
                 {
-                    //	ClearTextbox();
-                    string query = "INSERT INTO MonHoc(MaMH,TenMH,SoTiet, TongSoTiet, MaGV) VALUES('" + txtMaMH.Text + "','" + txtTenMH.Text + "','" + txtSoTietHoc.Text + "', '" + txtTongSoTiet.Text + "', '" + txtMaGVMH.Text + "')";
-                    using (SqlConnection connection = DataConnection.GetConnection())
+                    MonHocDTO monHoc = new MonHocDTO() 
                     {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                        connection.Dispose();
-                        MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.btnDanhSachMH_Click(null, null);
-                    }
+                        MaMH = txtMaMH.Text,
+                        TenMH = txtTenMH.Text,
+                        SoTiet = txtSoTietHoc.Text,
+                        TongSoTiet = txtTongSoTiet.Text,
+                        MaGV = txtMaGVMH.Text
+                    };
+                    monHoc_bll.InsertMonHoc(monHoc);
+                    this.btnDanhSachMH_Click(null, null);
                 }
 
             }
@@ -165,18 +142,16 @@ namespace QLHocSinh
 
                 else if (txtMaMH.Text != "")
                 {
-                    string sql = "UPDATE MonHoc SET TenMH ='" + txtTenMH.Text + "',  SoTiet='" + txtSoTietHoc.Text + "',  TongSoTiet='" + txtTongSoTiet.Text + "',  MaGV='" + txtMaGVMH.Text + "' WHERE MaMH='" + txtMaMH.Text + "'";
-                    using (SqlConnection connection = DataConnection.GetConnection())
+                    MonHocDTO monHoc = new MonHocDTO()
                     {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(sql, connection);
-                        command.ExecuteNonQuery();
-
-                        connection.Close();
-                        connection.Dispose();
-                        MessageBox.Show("Đã sửa xong rồi nhé.!!!");
-                        this.btnDanhSachMH_Click(null, null);
-                    }
+                        MaMH = txtMaMH.Text,
+                        TenMH = txtTenMH.Text,
+                        SoTiet = txtSoTietHoc.Text,
+                        TongSoTiet = txtTongSoTiet.Text,
+                        MaGV = txtMaGVMH.Text
+                    };
+                    monHoc_bll.UpdateMonHoc(monHoc);
+                    this.btnDanhSachMH_Click(null, null);
                 }
                 else
                 {
@@ -194,21 +169,8 @@ namespace QLHocSinh
         {
             try
             {
-                using (SqlConnection connection = DataConnection.GetConnection())
-                {
-                    if (MessageBox.Show("Bạn có thật sự muốn xóa Môn học có mã số: " + txtMaMH.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    {
-                        connection.Open();
-                        string query = "delete from MonHoc where MaMH=" + "'" + txtMaMH.Text + "'";
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-                        connection.Dispose();
-                        MessageBox.Show("Xóa Thành Công.!!!");
-                        this.btnDanhSachMH_Click(null, null);
-                    }
-
-                }
+                monHoc_bll.DeleteMonHoc(txtMaMH.Text);
+                this.btnDanhSachMH_Click(null, null);
             }
             catch (Exception ex)
             {

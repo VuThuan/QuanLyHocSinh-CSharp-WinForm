@@ -80,7 +80,6 @@
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Giáo Viên";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // txtDiaChiGV
             // 

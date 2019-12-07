@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace QLHocSinh
+namespace QLHocSinh.DTO
 {
-	public class HocSinh
-	{
+    public class HocSinhDTO
+    {
 		public string MaHS { get; set; }
 		public string TenHS { get; set; }
 		public int Tuoi { get; set; }

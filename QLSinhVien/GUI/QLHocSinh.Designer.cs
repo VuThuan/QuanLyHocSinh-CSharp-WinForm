@@ -29,29 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLHocSinh));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.gdangnhap = new System.Windows.Forms.GroupBox();
-            this.btnThoatForm = new DevComponents.DotNetBar.ButtonX();
-            this.btnLogin = new DevComponents.DotNetBar.ButtonX();
-            this.gdangxuat = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnThoatFormLogout = new DevComponents.DotNetBar.ButtonX();
-            this.btnLogout = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnLogoLink = new DevComponents.DotNetBar.ButtonItem();
-            this.itemContainer6 = new DevComponents.DotNetBar.ItemContainer();
-            this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem19 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.LinkWebsiteHaui = new DevComponents.DotNetBar.ButtonItem();
-            this.labelItem6 = new DevComponents.DotNetBar.LabelItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -80,6 +59,27 @@
             this.btnShowMonHoc = new DevComponents.DotNetBar.ButtonX();
             this.btnShowLopHoc = new DevComponents.DotNetBar.ButtonX();
             this.btnShowDSGV = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnLogoLink = new DevComponents.DotNetBar.ButtonItem();
+            this.itemContainer6 = new DevComponents.DotNetBar.ItemContainer();
+            this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem19 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
+            this.LinkWebsiteHaui = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem6 = new DevComponents.DotNetBar.LabelItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.gdangnhap = new System.Windows.Forms.GroupBox();
+            this.btnThoatForm = new DevComponents.DotNetBar.ButtonX();
+            this.btnLogin = new DevComponents.DotNetBar.ButtonX();
+            this.gdangxuat = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnThoatFormLogout = new DevComponents.DotNetBar.ButtonX();
+            this.btnLogout = new DevComponents.DotNetBar.ButtonX();
             this.hethong = new DevComponents.DotNetBar.RibbonTabItem();
             this.qlhv = new DevComponents.DotNetBar.RibbonTabItem();
             this.GiaoVienMon = new DevComponents.DotNetBar.RibbonTabItem();
@@ -96,14 +96,14 @@
             this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
-            this.ribbonPanel1.SuspendLayout();
-            this.gdangnhap.SuspendLayout();
-            this.gdangxuat.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
+            this.ribbonPanel1.SuspendLayout();
+            this.gdangnhap.SuspendLayout();
+            this.gdangxuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +111,9 @@
             // 
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             resources.ApplyResources(this.ribbonControl1, "ribbonControl1");
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.hethong,
@@ -127,173 +127,6 @@
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonControl1.TabGroupHeight = 14;
             this.ribbonControl1.TitleText = "Quản lí học sinh - Bài tập nhóm - KTPM 3 - K12";
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.ribbonPanel1.Controls.Add(this.gdangnhap);
-            this.ribbonPanel1.Controls.Add(this.gdangxuat);
-            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            // 
-            // gdangnhap
-            // 
-            this.gdangnhap.BackColor = System.Drawing.Color.PowderBlue;
-            this.gdangnhap.Controls.Add(this.btnThoatForm);
-            this.gdangnhap.Controls.Add(this.btnLogin);
-            resources.ApplyResources(this.gdangnhap, "gdangnhap");
-            this.gdangnhap.Name = "gdangnhap";
-            this.gdangnhap.TabStop = false;
-            // 
-            // btnThoatForm
-            // 
-            this.btnThoatForm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoatForm.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnThoatForm.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatForm.Image")));
-            resources.ApplyResources(this.btnThoatForm, "btnThoatForm");
-            this.btnThoatForm.Name = "btnThoatForm";
-            this.btnThoatForm.Click += new System.EventHandler(this.btnThoatForm_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
-            this.btnLogin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.btnLogin, "btnLogin");
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // gdangxuat
-            // 
-            this.gdangxuat.BackColor = System.Drawing.Color.PowderBlue;
-            this.gdangxuat.Controls.Add(this.label9);
-            this.gdangxuat.Controls.Add(this.btnThoatFormLogout);
-            this.gdangxuat.Controls.Add(this.btnLogout);
-            resources.ApplyResources(this.gdangxuat, "gdangxuat");
-            this.gdangxuat.Name = "gdangxuat";
-            this.gdangxuat.TabStop = false;
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // btnThoatFormLogout
-            // 
-            this.btnThoatFormLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoatFormLogout.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnThoatFormLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatFormLogout.Image")));
-            resources.ApplyResources(this.btnThoatFormLogout, "btnThoatFormLogout");
-            this.btnThoatFormLogout.Name = "btnThoatFormLogout";
-            this.btnThoatFormLogout.Click += new System.EventHandler(this.btnThoatFormLogout_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLogout.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            resources.ApplyResources(this.btnLogout, "btnLogout");
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.ribbonPanel4.Controls.Add(this.ribbonBar6);
-            resources.ApplyResources(this.ribbonPanel4, "ribbonPanel4");
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            // 
-            // ribbonBar6
-            // 
-            this.ribbonBar6.AutoOverflowEnabled = true;
-            this.ribbonBar6.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.ribbonBar6, "ribbonBar6");
-            this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnLogoLink,
-            this.itemContainer6});
-            this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            // 
-            // btnLogoLink
-            // 
-            this.btnLogoLink.Image = ((System.Drawing.Image)(resources.GetObject("btnLogoLink.Image")));
-            this.btnLogoLink.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnLogoLink.Name = "btnLogoLink";
-            this.btnLogoLink.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.btnLogoLink, "btnLogoLink");
-            this.btnLogoLink.Click += new System.EventHandler(this.btnLogoLink_Click);
-            // 
-            // itemContainer6
-            // 
-            this.itemContainer6.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Right;
-            this.itemContainer6.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.itemContainer6.Name = "itemContainer6";
-            this.itemContainer6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem21,
-            this.buttonItem18,
-            this.buttonItem19,
-            this.buttonItem3,
-            this.buttonItem22,
-            this.buttonItem20,
-            this.LinkWebsiteHaui,
-            this.labelItem6});
-            // 
-            // buttonItem21
-            // 
-            this.buttonItem21.Name = "buttonItem21";
-            resources.ApplyResources(this.buttonItem21, "buttonItem21");
-            // 
-            // buttonItem18
-            // 
-            this.buttonItem18.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
-            this.buttonItem18.Name = "buttonItem18";
-            resources.ApplyResources(this.buttonItem18, "buttonItem18");
-            // 
-            // buttonItem19
-            // 
-            this.buttonItem19.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem19.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem19.Image")));
-            this.buttonItem19.Name = "buttonItem19";
-            resources.ApplyResources(this.buttonItem19, "buttonItem19");
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
-            this.buttonItem3.Name = "buttonItem3";
-            resources.ApplyResources(this.buttonItem3, "buttonItem3");
-            // 
-            // buttonItem22
-            // 
-            this.buttonItem22.Name = "buttonItem22";
-            resources.ApplyResources(this.buttonItem22, "buttonItem22");
-            // 
-            // buttonItem20
-            // 
-            this.buttonItem20.Name = "buttonItem20";
-            resources.ApplyResources(this.buttonItem20, "buttonItem20");
-            // 
-            // LinkWebsiteHaui
-            // 
-            this.LinkWebsiteHaui.Name = "LinkWebsiteHaui";
-            resources.ApplyResources(this.LinkWebsiteHaui, "LinkWebsiteHaui");
-            this.LinkWebsiteHaui.Click += new System.EventHandler(this.LinkWebsiteHaui_Click_1);
-            // 
-            // labelItem6
-            // 
-            this.labelItem6.Name = "labelItem6";
-            this.labelItem6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2});
-            resources.ApplyResources(this.labelItem6, "labelItem6");
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.Name = "buttonItem2";
-            resources.ApplyResources(this.buttonItem2, "buttonItem2");
             // 
             // ribbonPanel2
             // 
@@ -519,6 +352,173 @@
             this.btnShowDSGV.Name = "btnShowDSGV";
             this.btnShowDSGV.Click += new System.EventHandler(this.btnShowDSGV_Click);
             // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.ribbonPanel4.Controls.Add(this.ribbonBar6);
+            resources.ApplyResources(this.ribbonPanel4, "ribbonPanel4");
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            // 
+            // ribbonBar6
+            // 
+            this.ribbonBar6.AutoOverflowEnabled = true;
+            this.ribbonBar6.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.ribbonBar6, "ribbonBar6");
+            this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnLogoLink,
+            this.itemContainer6});
+            this.ribbonBar6.Name = "ribbonBar6";
+            this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            // 
+            // btnLogoLink
+            // 
+            this.btnLogoLink.Image = ((System.Drawing.Image)(resources.GetObject("btnLogoLink.Image")));
+            this.btnLogoLink.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnLogoLink.Name = "btnLogoLink";
+            this.btnLogoLink.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.btnLogoLink, "btnLogoLink");
+            this.btnLogoLink.Click += new System.EventHandler(this.btnLogoLink_Click);
+            // 
+            // itemContainer6
+            // 
+            this.itemContainer6.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Right;
+            this.itemContainer6.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer6.Name = "itemContainer6";
+            this.itemContainer6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem21,
+            this.buttonItem18,
+            this.buttonItem19,
+            this.buttonItem3,
+            this.buttonItem22,
+            this.buttonItem20,
+            this.LinkWebsiteHaui,
+            this.labelItem6});
+            // 
+            // buttonItem21
+            // 
+            this.buttonItem21.Name = "buttonItem21";
+            resources.ApplyResources(this.buttonItem21, "buttonItem21");
+            // 
+            // buttonItem18
+            // 
+            this.buttonItem18.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
+            this.buttonItem18.Name = "buttonItem18";
+            resources.ApplyResources(this.buttonItem18, "buttonItem18");
+            // 
+            // buttonItem19
+            // 
+            this.buttonItem19.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem19.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem19.Image")));
+            this.buttonItem19.Name = "buttonItem19";
+            resources.ApplyResources(this.buttonItem19, "buttonItem19");
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
+            this.buttonItem3.Name = "buttonItem3";
+            resources.ApplyResources(this.buttonItem3, "buttonItem3");
+            // 
+            // buttonItem22
+            // 
+            this.buttonItem22.Name = "buttonItem22";
+            resources.ApplyResources(this.buttonItem22, "buttonItem22");
+            // 
+            // buttonItem20
+            // 
+            this.buttonItem20.Name = "buttonItem20";
+            resources.ApplyResources(this.buttonItem20, "buttonItem20");
+            // 
+            // LinkWebsiteHaui
+            // 
+            this.LinkWebsiteHaui.Name = "LinkWebsiteHaui";
+            resources.ApplyResources(this.LinkWebsiteHaui, "LinkWebsiteHaui");
+            this.LinkWebsiteHaui.Click += new System.EventHandler(this.LinkWebsiteHaui_Click_1);
+            // 
+            // labelItem6
+            // 
+            this.labelItem6.Name = "labelItem6";
+            this.labelItem6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem2});
+            resources.ApplyResources(this.labelItem6, "labelItem6");
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.Name = "buttonItem2";
+            resources.ApplyResources(this.buttonItem2, "buttonItem2");
+            // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.ribbonPanel1.Controls.Add(this.gdangnhap);
+            this.ribbonPanel1.Controls.Add(this.gdangxuat);
+            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            // 
+            // gdangnhap
+            // 
+            this.gdangnhap.BackColor = System.Drawing.Color.PowderBlue;
+            this.gdangnhap.Controls.Add(this.btnThoatForm);
+            this.gdangnhap.Controls.Add(this.btnLogin);
+            resources.ApplyResources(this.gdangnhap, "gdangnhap");
+            this.gdangnhap.Name = "gdangnhap";
+            this.gdangnhap.TabStop = false;
+            // 
+            // btnThoatForm
+            // 
+            this.btnThoatForm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoatForm.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnThoatForm.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatForm.Image")));
+            resources.ApplyResources(this.btnThoatForm, "btnThoatForm");
+            this.btnThoatForm.Name = "btnThoatForm";
+            this.btnThoatForm.Click += new System.EventHandler(this.btnThoatForm_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.btnLogin, "btnLogin");
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // gdangxuat
+            // 
+            this.gdangxuat.BackColor = System.Drawing.Color.PowderBlue;
+            this.gdangxuat.Controls.Add(this.label9);
+            this.gdangxuat.Controls.Add(this.btnThoatFormLogout);
+            this.gdangxuat.Controls.Add(this.btnLogout);
+            resources.ApplyResources(this.gdangxuat, "gdangxuat");
+            this.gdangxuat.Name = "gdangxuat";
+            this.gdangxuat.TabStop = false;
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // btnThoatFormLogout
+            // 
+            this.btnThoatFormLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoatFormLogout.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnThoatFormLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatFormLogout.Image")));
+            resources.ApplyResources(this.btnThoatFormLogout, "btnThoatFormLogout");
+            this.btnThoatFormLogout.Name = "btnThoatFormLogout";
+            this.btnThoatFormLogout.Click += new System.EventHandler(this.btnThoatFormLogout_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLogout.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            resources.ApplyResources(this.btnLogout, "btnLogout");
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // hethong
             // 
             this.hethong.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -559,14 +559,14 @@
             // 
             this.showdata.BackgroundColor = System.Drawing.Color.LightCyan;
             this.showdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showdata.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showdata.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.showdata, "showdata");
             this.showdata.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.showdata.Name = "showdata";
@@ -643,17 +643,17 @@
             this.Load += new System.EventHandler(this.QlSinhVien_Load);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
-            this.ribbonPanel1.ResumeLayout(false);
-            this.gdangnhap.ResumeLayout(false);
-            this.gdangxuat.ResumeLayout(false);
-            this.gdangxuat.PerformLayout();
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ribbonPanel3.ResumeLayout(false);
+            this.ribbonPanel4.ResumeLayout(false);
+            this.ribbonPanel1.ResumeLayout(false);
+            this.gdangnhap.ResumeLayout(false);
+            this.gdangxuat.ResumeLayout(false);
+            this.gdangxuat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showdata)).EndInit();
             this.ResumeLayout(false);
 

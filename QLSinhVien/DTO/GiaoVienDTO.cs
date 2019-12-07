@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace qlhocvien.DAL
+namespace QLHocSinh.DTO
 {
-	public class GV
+	public class GiaoVienDTO
 	{
 		public string MaGV { get; set; }
 		public string TenGV { get; set; }

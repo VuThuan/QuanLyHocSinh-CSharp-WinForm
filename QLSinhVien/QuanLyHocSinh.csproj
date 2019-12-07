@@ -65,12 +65,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\GiaoVienBLL.cs" />
     <Compile Include="BLL\HocSinhBLL.cs" />
-    <Compile Include="DAL\GV.cs" />
-    <Compile Include="DAL\HocSinh.cs" />
-    <Compile Include="DAL\LH.cs" />
-    <Compile Include="DAL\MH.cs" />
+    <Compile Include="BLL\LopHocBLL.cs" />
+    <Compile Include="BLL\MonHocBLL.cs" />
+    <Compile Include="DAL\GiaoVienDAL.cs" />
+    <Compile Include="DAL\HocSinhDAL.cs" />
+    <Compile Include="DAL\LopHocDAl.cs" />
+    <Compile Include="DAL\MonHocDAL.cs" />
     <Compile Include="DataConnection.cs" />
+    <Compile Include="DTO\GiaoVienDTO.cs" />
+    <Compile Include="DTO\HocSinhDTO.cs" />
+    <Compile Include="DTO\LopHocDTO.cs" />
+    <Compile Include="DTO\MonHocDTO.cs" />
     <Compile Include="GUI\DanhSachHocSinhThuocLop.cs">
       <SubType>Form</SubType>
     </Compile>
