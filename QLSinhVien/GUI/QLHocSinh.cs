@@ -380,7 +380,7 @@ namespace QLHocSinh
 				txttuoi.Text = showdata.Rows[index].Cells[2].Value.ToString();
 				cbgioitinh.Text = showdata.Rows[index].Cells[3].Value.ToString();
 				txtnoisinh.Text = showdata.Rows[index].Cells[4].Value.ToString();
-				cbmalop.Text = showdata.Rows[index].Cells[5].Value.ToString();
+				cbmalop.SelectedValue = showdata.Rows[index].Cells[5].Value.ToString();
 			}
 		}
 

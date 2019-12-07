@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LopHoc));
-            this.showdatakhoa = new System.Windows.Forms.DataGridView();
+            this.showdatalophoc = new System.Windows.Forms.DataGridView();
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,32 +37,36 @@
             this.btsua = new DevComponents.DotNetBar.ButtonX();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaGVCN = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.showdatakhoa)).BeginInit();
+            this.btnThemLH = new DevComponents.DotNetBar.ButtonX();
+            this.btnXoaLH = new DevComponents.DotNetBar.ButtonX();
+            this.btnShowDSLop = new DevComponents.DotNetBar.ButtonX();
+            this.btnSuaLH = new DevComponents.DotNetBar.ButtonX();
+            ((System.ComponentModel.ISupportInitialize)(this.showdatalophoc)).BeginInit();
             this.SuspendLayout();
             // 
-            // showdatakhoa
+            // showdatalophoc
             // 
-            this.showdatakhoa.BackgroundColor = System.Drawing.Color.LightCyan;
-            this.showdatakhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showdatakhoa.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.showdatakhoa.Location = new System.Drawing.Point(0, 137);
-            this.showdatakhoa.Name = "showdatakhoa";
-            this.showdatakhoa.Size = new System.Drawing.Size(489, 182);
-            this.showdatakhoa.TabIndex = 0;
-            this.showdatakhoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showdatakhoa_CellClick);
+            this.showdatalophoc.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.showdatalophoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.showdatalophoc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.showdatalophoc.Location = new System.Drawing.Point(0, 173);
+            this.showdatalophoc.Name = "showdatalophoc";
+            this.showdatalophoc.Size = new System.Drawing.Size(435, 182);
+            this.showdatalophoc.TabIndex = 0;
+            this.showdatalophoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showdatakhoa_CellClick);
             // 
             // txtMaLop
             // 
             this.txtMaLop.Location = new System.Drawing.Point(95, 15);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(184, 20);
+            this.txtMaLop.Size = new System.Drawing.Size(218, 20);
             this.txtMaLop.TabIndex = 1;
             // 
             // txtTenLop
             // 
             this.txtTenLop.Location = new System.Drawing.Point(95, 57);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(184, 20);
+            this.txtTenLop.Size = new System.Drawing.Size(218, 20);
             this.txtTenLop.TabIndex = 2;
             // 
             // label1
@@ -88,14 +92,10 @@
             // btsua
             // 
             this.btsua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btsua.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btsua.Image = global::qlhocvien.Properties.Resources.refresh;
-            this.btsua.Location = new System.Drawing.Point(350, 15);
+            this.btsua.Location = new System.Drawing.Point(0, 0);
             this.btsua.Name = "btsua";
-            this.btsua.Size = new System.Drawing.Size(89, 32);
-            this.btsua.TabIndex = 24;
-            this.btsua.Text = "Load Data";
-            this.btsua.Click += new System.EventHandler(this.Btsua_Click);
+            this.btsua.Size = new System.Drawing.Size(0, 0);
+            this.btsua.TabIndex = 27;
             // 
             // label3
             // 
@@ -111,14 +111,68 @@
             // 
             this.txtMaGVCN.Location = new System.Drawing.Point(95, 101);
             this.txtMaGVCN.Name = "txtMaGVCN";
-            this.txtMaGVCN.Size = new System.Drawing.Size(184, 20);
+            this.txtMaGVCN.Size = new System.Drawing.Size(218, 20);
             this.txtMaGVCN.TabIndex = 26;
+            // 
+            // btnThemLH
+            // 
+            this.btnThemLH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemLH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnThemLH.Image = global::qlhocvien.Properties.Resources.add;
+            this.btnThemLH.Location = new System.Drawing.Point(335, 15);
+            this.btnThemLH.Name = "btnThemLH";
+            this.btnThemLH.Size = new System.Drawing.Size(94, 30);
+            this.btnThemLH.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.btnThemLH.TabIndex = 51;
+            this.btnThemLH.Text = "Thêm";
+            this.btnThemLH.Click += new System.EventHandler(this.btnThemLH_Click);
+            // 
+            // btnXoaLH
+            // 
+            this.btnXoaLH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoaLH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnXoaLH.Image = global::qlhocvien.Properties.Resources.delete;
+            this.btnXoaLH.Location = new System.Drawing.Point(335, 101);
+            this.btnXoaLH.Name = "btnXoaLH";
+            this.btnXoaLH.Size = new System.Drawing.Size(94, 30);
+            this.btnXoaLH.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.btnXoaLH.TabIndex = 50;
+            this.btnXoaLH.Text = " Xóa";
+            this.btnXoaLH.Click += new System.EventHandler(this.btnXoaLH_Click);
+            // 
+            // btnShowDSLop
+            // 
+            this.btnShowDSLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnShowDSLop.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnShowDSLop.Image = global::qlhocvien.Properties.Resources.users;
+            this.btnShowDSLop.Location = new System.Drawing.Point(150, 137);
+            this.btnShowDSLop.Name = "btnShowDSLop";
+            this.btnShowDSLop.Size = new System.Drawing.Size(145, 30);
+            this.btnShowDSLop.TabIndex = 49;
+            this.btnShowDSLop.Text = "Xem  Danh Sach";
+            this.btnShowDSLop.Click += new System.EventHandler(this.btnShowDSLop_Click);
+            // 
+            // btnSuaLH
+            // 
+            this.btnSuaLH.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSuaLH.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnSuaLH.Image = global::qlhocvien.Properties.Resources.refresh;
+            this.btnSuaLH.Location = new System.Drawing.Point(335, 57);
+            this.btnSuaLH.Name = "btnSuaLH";
+            this.btnSuaLH.Size = new System.Drawing.Size(94, 30);
+            this.btnSuaLH.TabIndex = 48;
+            this.btnSuaLH.Text = "Sửa";
+            this.btnSuaLH.Click += new System.EventHandler(this.btnSuaLH_Click);
             // 
             // LopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 319);
+            this.ClientSize = new System.Drawing.Size(435, 355);
+            this.Controls.Add(this.btnThemLH);
+            this.Controls.Add(this.btnXoaLH);
+            this.Controls.Add(this.btnShowDSLop);
+            this.Controls.Add(this.btnSuaLH);
             this.Controls.Add(this.txtMaGVCN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btsua);
@@ -126,7 +180,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.txtMaLop);
-            this.Controls.Add(this.showdatakhoa);
+            this.Controls.Add(this.showdatalophoc);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -134,7 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lớp Học";
             this.Load += new System.EventHandler(this.LopHoc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.showdatakhoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showdatalophoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +196,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.DataGridView showdatakhoa;
+		private System.Windows.Forms.DataGridView showdatalophoc;
 		private System.Windows.Forms.TextBox txtMaLop;
 		private System.Windows.Forms.TextBox txtTenLop;
 		private System.Windows.Forms.Label label1;
@@ -150,5 +204,9 @@
 		private DevComponents.DotNetBar.ButtonX btsua;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaGVCN;
+        private DevComponents.DotNetBar.ButtonX btnThemLH;
+        private DevComponents.DotNetBar.ButtonX btnXoaLH;
+        private DevComponents.DotNetBar.ButtonX btnShowDSLop;
+        private DevComponents.DotNetBar.ButtonX btnSuaLH;
     }
 }
