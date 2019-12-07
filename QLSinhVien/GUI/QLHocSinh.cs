@@ -16,7 +16,9 @@ namespace QLHocSinh
 		{
 			InitializeComponent();
 		}
+
 		HocSinhBLL hocSinh_Bll = new HocSinhBLL();
+
 		public bool Check()
 		{
 			if (string.IsNullOrEmpty(txtMaHS.Text) ||
@@ -171,20 +173,20 @@ namespace QLHocSinh
 
 		private void btnSearch_Click_1(object sender, EventArgs e)
 		{
-			string msv = "Tìm Theo Mã Học Sinh", ht = "Tìm Theo Tên Học Sinh";
-			string tim = "";
 			List<HocSinhDTO> lst = hocSinh_Bll.ShowDataHocSinh();
 			List<HocSinhDTO> search = new List<HocSinhDTO>();
+			string mhs = "Tìm Theo Mã Học Sinh", ht = "Tìm Theo Tên Học Sinh";
+			string tim = "";
 			tim = txtSearch.Text.ToLower();
 			try
 			{
-				if (txtSearch.Text != "")
+				if (string.IsNullOrEmpty(txtSearch.Text) == false)
 				{
-					if (cbSearch.Text.ToLower() == msv.ToLower())
+					if (cbSearch.Text.ToLower() == mhs.ToLower())
 					{
 						foreach (var item in lst)
 						{
-							if (item.MaHS.ToLower().Contains(tim) == true)
+							if (item.MaHS.ToLower().Contains(tim))
 							{
 								search.Add(item);
 							}
@@ -197,7 +199,7 @@ namespace QLHocSinh
 					{
 						foreach (var item in lst)
 						{
-							if (item.TenHS.ToLower().Contains(tim) == true)
+							if (item.TenHS.ToLower().Contains(tim))
 							{
 								search.Add(item);
 							}
