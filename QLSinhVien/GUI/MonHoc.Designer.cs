@@ -30,11 +30,11 @@
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonHoc));
             this.showdatamonhoc = new System.Windows.Forms.DataGridView();
-            this.txtmamhmh = new System.Windows.Forms.TextBox();
-            this.txttenmhmh = new System.Windows.Forms.TextBox();
-            this.txtmagvmh = new System.Windows.Forms.TextBox();
-            this.txttongsotiet = new System.Windows.Forms.TextBox();
-            this.txtsotiethoc = new System.Windows.Forms.TextBox();
+            this.txtMaMH = new System.Windows.Forms.TextBox();
+            this.txtTenMH = new System.Windows.Forms.TextBox();
+            this.txtMaGVMH = new System.Windows.Forms.TextBox();
+            this.txtTongSoTiet = new System.Windows.Forms.TextBox();
+            this.txtSoTietHoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,40 +59,40 @@
             this.showdatamonhoc.TabIndex = 0;
             this.showdatamonhoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showdatamonhoc_CellClick);
             // 
-            // txtmamhmh
+            // txtMaMH
             // 
-            this.txtmamhmh.Location = new System.Drawing.Point(108, 23);
-            this.txtmamhmh.Name = "txtmamhmh";
-            this.txtmamhmh.Size = new System.Drawing.Size(114, 20);
-            this.txtmamhmh.TabIndex = 1;
+            this.txtMaMH.Location = new System.Drawing.Point(108, 23);
+            this.txtMaMH.Name = "txtMaMH";
+            this.txtMaMH.Size = new System.Drawing.Size(114, 20);
+            this.txtMaMH.TabIndex = 1;
             // 
-            // txttenmhmh
+            // txtTenMH
             // 
-            this.txttenmhmh.Location = new System.Drawing.Point(108, 53);
-            this.txttenmhmh.Name = "txttenmhmh";
-            this.txttenmhmh.Size = new System.Drawing.Size(114, 20);
-            this.txttenmhmh.TabIndex = 2;
+            this.txtTenMH.Location = new System.Drawing.Point(108, 53);
+            this.txtTenMH.Name = "txtTenMH";
+            this.txtTenMH.Size = new System.Drawing.Size(114, 20);
+            this.txtTenMH.TabIndex = 2;
             // 
-            // txtmagvmh
+            // txtMaGVMH
             // 
-            this.txtmagvmh.Location = new System.Drawing.Point(327, 23);
-            this.txtmagvmh.Name = "txtmagvmh";
-            this.txtmagvmh.Size = new System.Drawing.Size(100, 20);
-            this.txtmagvmh.TabIndex = 3;
+            this.txtMaGVMH.Location = new System.Drawing.Point(327, 23);
+            this.txtMaGVMH.Name = "txtMaGVMH";
+            this.txtMaGVMH.Size = new System.Drawing.Size(100, 20);
+            this.txtMaGVMH.TabIndex = 3;
             // 
-            // txttongsotiet
+            // txtTongSoTiet
             // 
-            this.txttongsotiet.Location = new System.Drawing.Point(327, 53);
-            this.txttongsotiet.Name = "txttongsotiet";
-            this.txttongsotiet.Size = new System.Drawing.Size(100, 20);
-            this.txttongsotiet.TabIndex = 4;
+            this.txtTongSoTiet.Location = new System.Drawing.Point(327, 53);
+            this.txtTongSoTiet.Name = "txtTongSoTiet";
+            this.txtTongSoTiet.Size = new System.Drawing.Size(100, 20);
+            this.txtTongSoTiet.TabIndex = 4;
             // 
-            // txtsotiethoc
+            // txtSoTietHoc
             // 
-            this.txtsotiethoc.Location = new System.Drawing.Point(108, 84);
-            this.txtsotiethoc.Name = "txtsotiethoc";
-            this.txtsotiethoc.Size = new System.Drawing.Size(114, 20);
-            this.txtsotiethoc.TabIndex = 5;
+            this.txtSoTietHoc.Location = new System.Drawing.Point(108, 84);
+            this.txtSoTietHoc.Name = "txtSoTietHoc";
+            this.txtSoTietHoc.Size = new System.Drawing.Size(114, 20);
+            this.txtSoTietHoc.TabIndex = 5;
             // 
             // label1
             // 
@@ -208,11 +208,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtsotiethoc);
-            this.Controls.Add(this.txttongsotiet);
-            this.Controls.Add(this.txtmagvmh);
-            this.Controls.Add(this.txttenmhmh);
-            this.Controls.Add(this.txtmamhmh);
+            this.Controls.Add(this.txtSoTietHoc);
+            this.Controls.Add(this.txtTongSoTiet);
+            this.Controls.Add(this.txtMaGVMH);
+            this.Controls.Add(this.txtTenMH);
+            this.Controls.Add(this.txtMaMH);
             this.Controls.Add(this.showdatamonhoc);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -229,11 +229,11 @@
 		#endregion
 
 		private System.Windows.Forms.DataGridView showdatamonhoc;
-		private System.Windows.Forms.TextBox txtmamhmh;
-		private System.Windows.Forms.TextBox txttenmhmh;
-		private System.Windows.Forms.TextBox txtmagvmh;
-		private System.Windows.Forms.TextBox txttongsotiet;
-		private System.Windows.Forms.TextBox txtsotiethoc;
+		private System.Windows.Forms.TextBox txtMaMH;
+		private System.Windows.Forms.TextBox txtTenMH;
+		private System.Windows.Forms.TextBox txtMaGVMH;
+		private System.Windows.Forms.TextBox txtTongSoTiet;
+		private System.Windows.Forms.TextBox txtSoTietHoc;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;

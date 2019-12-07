@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label9 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnDangNhap = new DevComponents.DotNetBar.ButtonX();
+            this.btnClose = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // label9
@@ -47,12 +47,12 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Mật Khẩu";
             // 
-            // txtuser
+            // txtUsername
             // 
-            this.txtuser.Location = new System.Drawing.Point(129, 79);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(100, 20);
-            this.txtuser.TabIndex = 32;
+            this.txtUsername.Location = new System.Drawing.Point(129, 79);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.TabIndex = 32;
             // 
             // label10
             // 
@@ -64,51 +64,51 @@
             this.label10.TabIndex = 35;
             this.label10.Text = "Tên Đăng Nhập";
             // 
-            // txtpass
+            // txtPassword
             // 
-            this.txtpass.Location = new System.Drawing.Point(129, 120);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(100, 20);
-            this.txtpass.TabIndex = 33;
+            this.txtPassword.Location = new System.Drawing.Point(129, 120);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 33;
             // 
-            // buttonX5
+            // btnDangNhap
             // 
-            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX5.Image = global::qlhocvien.Properties.Resources.user_accept;
-            this.buttonX5.Location = new System.Drawing.Point(29, 182);
-            this.buttonX5.Name = "buttonX5";
-            this.buttonX5.Size = new System.Drawing.Size(95, 30);
-            this.buttonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.buttonX5.TabIndex = 36;
-            this.buttonX5.Text = "Đăng Nhập";
-            this.buttonX5.Click += new System.EventHandler(this.ButtonX5_Click);
+            this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnDangNhap.Image = global::qlhocvien.Properties.Resources.user_accept;
+            this.btnDangNhap.Location = new System.Drawing.Point(29, 182);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(95, 30);
+            this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.btnDangNhap.TabIndex = 36;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // buttonX1
+            // btnClose
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.buttonX1.Image = global::qlhocvien.Properties.Resources.delete;
-            this.buttonX1.Location = new System.Drawing.Point(164, 182);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(95, 30);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.buttonX1.TabIndex = 37;
-            this.buttonX1.Text = "Thoát";
-            this.buttonX1.Click += new System.EventHandler(this.ButtonX1_Click);
+            this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClose.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnClose.Image = global::qlhocvien.Properties.Resources.delete;
+            this.btnClose.Location = new System.Drawing.Point(164, 182);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 30);
+            this.btnClose.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.btnClose.TabIndex = 37;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Login
             // 
-            this.AcceptButton = this.buttonX5;
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.buttonX1);
-            this.Controls.Add(this.buttonX5);
-            this.Controls.Add(this.txtpass);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtuser);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label9);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -124,11 +124,11 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtpass;
-        private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private DevComponents.DotNetBar.ButtonX btnDangNhap;
+        private DevComponents.DotNetBar.ButtonX btnClose;
 
     }
 }

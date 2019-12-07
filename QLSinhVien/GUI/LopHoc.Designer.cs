@@ -145,9 +145,9 @@
             this.btnShowDSLop.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnShowDSLop.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.btnShowDSLop.Image = global::qlhocvien.Properties.Resources.users;
-            this.btnShowDSLop.Location = new System.Drawing.Point(150, 137);
+            this.btnShowDSLop.Location = new System.Drawing.Point(138, 127);
             this.btnShowDSLop.Name = "btnShowDSLop";
-            this.btnShowDSLop.Size = new System.Drawing.Size(145, 30);
+            this.btnShowDSLop.Size = new System.Drawing.Size(145, 40);
             this.btnShowDSLop.TabIndex = 49;
             this.btnShowDSLop.Text = "Xem  Danh Sach";
             this.btnShowDSLop.Click += new System.EventHandler(this.btnShowDSLop_Click);

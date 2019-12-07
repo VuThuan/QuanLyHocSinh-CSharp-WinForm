@@ -21,55 +21,12 @@ namespace QLHocSinh
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Login_Load(object sender, EventArgs e)
         {
-            txtuser.Select();
-        }
-		public void Login1(string user, string pass)
-		{
-
-		}
-        public bool login(string user, string pass)
-        {
-            string sql = "Select * From QuanLy";
-            OleDbConnection cnn = new OleDbConnection();
-            cnn.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0 ;" + "Data Source =" +
-                                Application.StartupPath + @"\qlhocvien.mdb;" +
-                                "Jet OLEDB:Database Password =;" +
-                                "User ID = admin";
-
-
-            cnn.Open();
-
-            OleDbCommand cmd = new OleDbCommand(sql, cnn);
-            OleDbDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows == true)
-            {
-                while (reader.Read())
-                {
-                    if (txtuser.Text == reader["username"].ToString())
-                    {
-                        SAVEUSER = reader["username"].ToString();
-                        SAVEPASS = reader["password"].ToString();
-                    }
-                }
-            }
-            cnn.Close();
-            if (user == SAVEUSER && pass == SAVEPASS)
-            {
-                return true;
-            }
-            return false;
+            txtUsername.Select();
         }
 
-
-        private void ButtonX1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             try
             {
@@ -92,13 +49,13 @@ namespace QLHocSinh
             }
         }
 
-        private void ButtonX5_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtuser.Text == "")
+            if (txtUsername.Text == "")
             {
                 MessageBox.Show("Tên Đăng Nhập không được để trống");
             }
-            else if (txtpass.Text == "")
+            else if (txtPassword.Text == "")
             {
                 MessageBox.Show("Mật khẩu không được để trống");
             }
@@ -119,7 +76,7 @@ namespace QLHocSinh
 				//{
 				//    MessageBox.Show(ex.Message);
 				//}
-				if (txtuser.Text =="admin" && txtpass.Text=="admin")
+				if (txtUsername.Text =="admin" && txtPassword.Text=="admin")
 				{
 					MessageBox.Show("Đăng nhập thành công");
 					flag = true;

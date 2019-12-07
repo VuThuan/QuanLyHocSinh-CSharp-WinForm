@@ -94,7 +94,7 @@ namespace QLHocSinh
 						connection.Close();
 						connection.Dispose();
 						MessageBox.Show("Thêm thành công.!!", "Thông báo cho mà biết này", MessageBoxButtons.OK, MessageBoxIcon.Information);
-						this.ButtonX1_Click(null, null);
+						this.btnShowDS_Click(null, null);
 					}
 				}
 
@@ -106,7 +106,7 @@ namespace QLHocSinh
 			}
 		}
 
-		private void Btsua_Click(object sender, EventArgs e)
+		private void btnSua_Click(object sender, EventArgs e)
 		{
 			try
 			{
@@ -128,7 +128,7 @@ namespace QLHocSinh
 						connection.Dispose();
 					}
 					MessageBox.Show("Đã sửa xong rồi nhé.!!!");
-					this.ButtonX1_Click(null, null);
+					this.btnShowDS_Click(null, null);
 				}
 				else
 				{
@@ -142,18 +142,18 @@ namespace QLHocSinh
 			}
 		}
 
-		private void Timgv_Click(object sender, EventArgs e)
+		private void btnSearchGV_Click(object sender, EventArgs e)
 		{
 			List<GV> lst = DanhSachGV();
 			List<GV> search = new List<GV>();
 			string mgv = "Tìm Theo Mã Giáo Viên", tgv = "Tìm Theo Tên Giáo Viên";
 			string tim = "";
-			tim = txtsearch.Text.ToLower();
+			tim = txtSearch.Text.ToLower();
 			try
 			{
-				if (string.IsNullOrEmpty(txtsearch.Text) == false)
+				if (string.IsNullOrEmpty(txtSearch.Text) == false)
 				{
-					if (cbsearch.Text.ToLower() == mgv.ToLower())
+					if (cbSearch.Text.ToLower() == mgv.ToLower())
 					{
 						foreach (var item in lst)
 						{
@@ -165,7 +165,7 @@ namespace QLHocSinh
 						showdatagv.DataSource = search;
 						ShowGridViewGV();
 					}
-					else if (cbsearch.Text.ToLower() == tgv.ToLower())
+					else if (cbSearch.Text.ToLower() == tgv.ToLower())
 					{
 						foreach (var item in lst)
 						{
@@ -194,7 +194,7 @@ namespace QLHocSinh
 			}
 		}
 
-		private void ButtonX1_Click(object sender, EventArgs e)
+		private void btnShowDS_Click(object sender, EventArgs e)
 		{
 			List<GV> lst = this.DanhSachGV();
 			showdatagv.DataSource = lst;
@@ -222,7 +222,7 @@ namespace QLHocSinh
             }
 		}
 
-		private void btxoa_Click(object sender, EventArgs e)
+		private void btnXoa_Click(object sender, EventArgs e)
 		{
 			try
 			{
@@ -236,7 +236,7 @@ namespace QLHocSinh
 						command.ExecuteNonQuery();
 						connection.Close();
 						connection.Dispose();
-						this.ButtonX1_Click(null, null);
+						this.btnShowDS_Click(null, null);
 					}
 					
 				}

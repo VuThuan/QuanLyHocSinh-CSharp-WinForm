@@ -77,11 +77,11 @@ namespace QLHocSinh
 
         private bool ValidateTextbox()
         {
-            if (string.IsNullOrEmpty(txtmamhmh.Text) ||
-                string.IsNullOrEmpty(txttenmhmh.Text) ||
-                string.IsNullOrEmpty(txtsotiethoc.Text) ||
-                string.IsNullOrEmpty(txttongsotiet.Text) ||
-                string.IsNullOrEmpty(txtmagvmh.Text) 
+            if (string.IsNullOrEmpty(txtMaMH.Text) ||
+                string.IsNullOrEmpty(txtTenMH.Text) ||
+                string.IsNullOrEmpty(txtSoTietHoc.Text) ||
+                string.IsNullOrEmpty(txtTongSoTiet.Text) ||
+                string.IsNullOrEmpty(txtMaGVMH.Text) 
                 )
             {
                 return true;
@@ -94,11 +94,11 @@ namespace QLHocSinh
 
         private void ClearTextbox()
         {
-            txtmamhmh.Text = "";
-            txttenmhmh.Text = "";
-            txtsotiethoc.Text = "";
-            txttongsotiet.Text = "";
-            txtmagvmh.Text = "";
+            txtMaMH.Text = "";
+            txtTenMH.Text = "";
+            txtSoTietHoc.Text = "";
+            txtTongSoTiet.Text = "";
+            txtMaGVMH.Text = "";
         }
 
         private void btnThemMH_Click(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace QLHocSinh
                 else
                 {
                     //	ClearTextbox();
-                    string query = "INSERT INTO MonHoc(MaMH,TenMH,SoTiet, TongSoTiet, MaGV) VALUES('" + txtmamhmh.Text + "','" + txttenmhmh.Text + "','" + txtsotiethoc.Text + "', '" + txttongsotiet.Text + "', '" + txtmagvmh.Text + "')";
+                    string query = "INSERT INTO MonHoc(MaMH,TenMH,SoTiet, TongSoTiet, MaGV) VALUES('" + txtMaMH.Text + "','" + txtTenMH.Text + "','" + txtSoTietHoc.Text + "', '" + txtTongSoTiet.Text + "', '" + txtMaGVMH.Text + "')";
                     using (SqlConnection connection = DataConnection.GetConnection())
                     {
                         connection.Open();
@@ -140,11 +140,11 @@ namespace QLHocSinh
                 int row = e.RowIndex;
                 if (row >= 0)
                 {
-                    txtmamhmh.Text = showdatamonhoc.Rows[row].Cells[0].Value.ToString();
-                    txttenmhmh.Text = showdatamonhoc.Rows[row].Cells[1].Value.ToString();
-                    txtmagvmh.Text = showdatamonhoc.Rows[row].Cells[4].Value.ToString();
-                    txttongsotiet.Text = showdatamonhoc.Rows[row].Cells[3].Value.ToString();
-                    txtsotiethoc.Text = showdatamonhoc.Rows[row].Cells[2].Value.ToString();
+                    txtMaMH.Text = showdatamonhoc.Rows[row].Cells[0].Value.ToString();
+                    txtTenMH.Text = showdatamonhoc.Rows[row].Cells[1].Value.ToString();
+                    txtMaGVMH.Text = showdatamonhoc.Rows[row].Cells[4].Value.ToString();
+                    txtTongSoTiet.Text = showdatamonhoc.Rows[row].Cells[3].Value.ToString();
+                    txtSoTietHoc.Text = showdatamonhoc.Rows[row].Cells[2].Value.ToString();
                 }
 
             }
@@ -158,14 +158,14 @@ namespace QLHocSinh
         {
             try
             {
-                if (txtmamhmh.Text == "" || txttenmhmh.Text == "" || txtsotiethoc.Text == "" || txttongsotiet.Text == "" || txtmagvmh.Text == "")
+                if (txtMaMH.Text == "" || txtTenMH.Text == "" || txtSoTietHoc.Text == "" || txtTongSoTiet.Text == "" || txtMaGVMH.Text == "")
                 {
                     MessageBox.Show("Phải Nhập đủ Thông Tin");
                 }
 
-                else if (txtmamhmh.Text != "")
+                else if (txtMaMH.Text != "")
                 {
-                    string sql = "UPDATE MonHoc SET TenMH ='" + txttenmhmh.Text + "',  SoTiet='" + txtsotiethoc.Text + "',  TongSoTiet='" + txttongsotiet.Text + "',  MaGV='" + txtmagvmh.Text + "' WHERE MaMH='" + txtmamhmh.Text + "'";
+                    string sql = "UPDATE MonHoc SET TenMH ='" + txtTenMH.Text + "',  SoTiet='" + txtSoTietHoc.Text + "',  TongSoTiet='" + txtTongSoTiet.Text + "',  MaGV='" + txtMaGVMH.Text + "' WHERE MaMH='" + txtMaMH.Text + "'";
                     using (SqlConnection connection = DataConnection.GetConnection())
                     {
                         connection.Open();
@@ -196,10 +196,10 @@ namespace QLHocSinh
             {
                 using (SqlConnection connection = DataConnection.GetConnection())
                 {
-                    if (MessageBox.Show("Bạn có thật sự muốn xóa Môn học có mã số: " + txtmamhmh.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("Bạn có thật sự muốn xóa Môn học có mã số: " + txtMaMH.Text, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         connection.Open();
-                        string query = "delete from MonHoc where MaMH=" + "'" + txtmamhmh.Text + "'";
+                        string query = "delete from MonHoc where MaMH=" + "'" + txtMaMH.Text + "'";
                         SqlCommand command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
                         connection.Close();
